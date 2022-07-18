@@ -1,20 +1,44 @@
-#include <bits/stdc++.h>
+/*
+Algorithm or Logic:
+Complexity: 
+Link:
+More info: 
+*/
 
+#include <bits/stdc++.h>
 using namespace std;
 
-const int N=1e4+10;
+#define F first 
+#define S second
+#define PB push_back
+#define MP make_pair
+#define endl '\n'
+//#define ITE(i,a,b) for(int i = a; i <= n; i++)
 
-int main (){
+typedef long long ll;
+typedef int TD; // Define type data
 
+using ii=pair<TD,TD>;
+
+const int N=1e5+5;
+
+int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
 
-    #ifndef ONLINE_JUDGE
+    #ifdef LOCAL
         freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout);
+        //freopen("input.txt", "r", stdin);
+        //freopen("output.txt", "w", stdout);
     #endif
     
+    TD t;
+    cin >> t;
+    
+    cout << t << endl;
+    cout << t << endl;
     
     return 0;
 }
