@@ -16,7 +16,7 @@ using namespace std;
 //#define ITE(i,a,b) for(int i = a; i <= n; i++)
 
 typedef long long ll;
-typedef int TD; // Define type data
+typedef int td; // Define type data
 
 using ii=pair<TD,TD>;
 
@@ -27,7 +27,7 @@ int main(){
     cin.tie(0);
     cout.tie(0);
 
-    #ifdef LOCAL
+    #ifndef ONLINE_JUDGE
         freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout);
         //freopen("input.txt", "r", stdin);
