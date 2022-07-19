@@ -20,7 +20,9 @@ typedef int td; // Define type data
 
 using ii=pair<TD,TD>;
 
-const int N=1e5+5;
+const int INF= 1*1e9+10;
+
+const int MAXN=1e5+5;
 
 int main(){
     ios::sync_with_stdio(0);
