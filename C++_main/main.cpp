@@ -16,18 +16,24 @@ using namespace std;
 //#define ITE(i,a,b) for(int i = a; i <= n; i++)
 
 typedef long long ll;
-typedef int td; // Define type data
+//typedef int td; // Define type data int as td
 
-using ii=pair<TD,TD>;
+using ii=pair<int,int>;
 
 const int INF= 1*1e9+10;
 
 const int MAXN=1e5+5;
 
+void solv(){
+    int n;
+    cin >> n;
+    cout << n << endl;    
+}
+
 int main(){
     ios::sync_with_stdio(0);
     cin.tie(0);
-    cout.tie(0);
+    //cout.tie(0);
 
     #ifndef ONLINE_JUDGE
         freopen("input.txt", "r", stdin);
@@ -36,11 +42,9 @@ int main(){
         //freopen("output.txt", "w", stdout);
     #endif
     
-    TD t;
+    int t;
     cin >> t;
-    
-    cout << t << endl;
-    cout << t << endl;
+    for(int i=0; i<t; i++) solv();   
     
     return 0;
 }
