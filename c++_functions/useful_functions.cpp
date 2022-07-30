@@ -12,6 +12,7 @@ pair<ll,ll> pa;
 vector<ll> vec(n, k); // Fill the vector with k
 memset(arr, k, sizeof arr); // Fill the array with k
 
+// Structure
 //SET 
 	-> Sets are containers that store unique elements following a specific order.
 	-> The value of the elements in a set cannot be modified once in the container
@@ -27,11 +28,15 @@ map <ll,ll> mp; // map <key,data> mp;
 mp[k] = d; // ll k,d;
 mp[i].first // key
 mp[i].second //data
-	
-// STRING/CHAR
-stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case
 
 //VECTOR
 vector<ll> vec;
 ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
+
+// Variable
+//INT 
+void print (int size, int prin[]) // 
+	
+// STRING/CHAR
+stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case
