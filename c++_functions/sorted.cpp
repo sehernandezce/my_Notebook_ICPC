@@ -6,7 +6,7 @@ ll arr[MAXN];
 vector <ll> vec;
 
 void sorted(){
-        // Sort from largest to smallest
+        // Sort from smallest to largest
     // For vectors 
     sort(vec.begin(),vec.end()); // sort(vec.rbegin(),vec.rend());
 
