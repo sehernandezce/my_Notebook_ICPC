@@ -1,6 +1,7 @@
 // Algorithm or Logic: Bitmask/Bitmasking
 // Complexity: O(n) 
 
+#define var n << b
 void bitmask(){
     ll n,b;
     n << b; // n <<= b; n / 2^b
