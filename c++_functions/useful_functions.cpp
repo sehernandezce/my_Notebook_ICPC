@@ -21,10 +21,16 @@ st.inset(a); // ll a;
 st.find(a); // ss.find(a)!=ss.end() Exists a
 st.size();
 
+//MAP
+map <ll,ll> mp; // map <key,data> mp;
+mp[k] = d; // ll k,d;
+mp[i].first // key
+mp[i].second //data
+	
 // STRING/CHAR
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case
 
-//Vector
+//VECTOR
 vector<ll> vec;
 ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
