@@ -1,3 +1,24 @@
+//  Algorithm or Logic: Fibonacci
+//  Complexity: O(n)
+//  Time O(n) ; storage > long long when n>92
+
+ll fibo(ll n){
+    ll preant=0,ant=1,ans=0;
+    //cout << "0 1 ";
+    for(int i=2; i<=n; i++) {
+        ans=preant+ant;
+        preant=ant;
+        ant=ans;
+        //cout << ans << " ";
+    }
+    //cout << endl;
+    return n<2 ? n : ans;
+}
+
+
+// Note
+/*
+
 /*
 Algorithm or Logic: Fibonacci
 Complexity:O(n)
@@ -7,21 +28,19 @@ More info:
 https://quantdare.com/numeros-de-fibonacci/
 https://www.wextensible.com/temas/recursivos/fibonacci.html
 calculator: https://es.numberempire.com/fibonaccinumbers.php
-*/
 
 #include <bits/stdc++.h>
 using namespace std;
 
 #define endl '\n'
-
 typedef long long ll; 
 
 /* 
-int fibo(int i){
+ll fibo2(int i){
     if(i<2) return i;
     return (fibo(i-1) + fibo(i-2));
 }
-*/
+
 
 
 //  Time O(n) ; storage >long long when n>92
@@ -56,3 +75,4 @@ int main(){
 
     return 0;
 }
+*/
