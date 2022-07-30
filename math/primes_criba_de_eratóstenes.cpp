@@ -20,7 +20,7 @@ void prim(ll n){ // primes with n >= 2
 }
 
 /*
-    int n;
+    ll n;
     cin >> n;
     prim(n);
     for(auto ele: prime) cout << ele << " ";
