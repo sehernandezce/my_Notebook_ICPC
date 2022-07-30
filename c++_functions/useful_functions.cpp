@@ -22,6 +22,7 @@ st.find(a); // ss.find(a)!=ss.end() Exists a
 st.size();
 
 //MAP
+	-> Internally, the elements in a map are always sorted by its key
 map <ll,ll> mp; // map <key,data> mp;
 mp[k] = d; // ll k,d;
 mp[i].first // key
