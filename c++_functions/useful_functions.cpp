@@ -43,6 +43,9 @@ memset(arr, k, sizeof arr);
 	// Variable
 	
 //INT  ( 2*1e-9 <= x <= 2*1e9) (4 bytes)
+
 // Long (4 bytes) long long ( 9*1e-18 <= x <= 9*1e18) (8 bytes)
+
 // STRING/ CHAR (1 bytes)
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case
+replace(line.begin(),line.end(),x,y); // string line, x, y to replace x with y.
