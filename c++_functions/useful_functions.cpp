@@ -39,6 +39,7 @@ vector<ll> vec(n, k); // Fill the vector with k
 //ARRAY
 void print (ll size, ll prin[])
 memset(arr, k, sizeof arr); 
+reverse(arr,arr+n);
 
 	// Variable
 	
