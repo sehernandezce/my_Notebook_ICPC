@@ -20,6 +20,7 @@ memset(arr, k, sizeof arr); // Fill the array with k
 set<ll> st;
 st.inset(a); // ll a;
 st.find(a); // ss.find(a)!=ss.end() Exists a
+auto s1_Iter = s1.begin( );  ll elem1= *s1_Iter; // get the first element
 st.size();
 
 //MAP
