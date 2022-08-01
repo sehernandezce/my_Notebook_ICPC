@@ -5,6 +5,8 @@
 vector <ll> prime;
 void prim(ll n){ // primes with n >= 2
     ll num[n+5];
+    num[0]=-1;
+    num[1]=-1;
     for(ll i=2; i<=n; i++) num[i]=i;
 
     ll i=2;
