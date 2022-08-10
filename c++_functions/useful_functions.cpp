@@ -50,3 +50,5 @@ reverse(arr,arr+n);
 // STRING/ CHAR (1 bytes)
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case // int cmpS = strcmp(&sax[0],&s2ax[0]); // a b -> cmpS -1 < 0 ; b a -> cmpS 1 > 0
 replace(line.begin(),line.end(),x,y); // string line, x, y to replace x with y.
+stoi(s1.substr(i)); //for string to int
+s1.substr(i) // substring
