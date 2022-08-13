@@ -39,7 +39,7 @@ vector<ll> vec(n, k); // Fill the vector with k
 //ARRAY
 void print (ll size, ll prin[])
 memset(arr, k, sizeof arr); 
-reverse(arr,arr+n);
+reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 
 //QUEUE
 	-> The reason for this is that the default version of the C++ priority queue finds maximum elements, while we want to find minimum elements.
