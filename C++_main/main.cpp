@@ -12,6 +12,9 @@ using namespace std;
 #define S second
 #define PB push_back
 #define MP make_pair
+#define int long long int
+#define MAX LLONG_MAX
+#define MIN LLONG_MIN
 #define endl '\n'
 //#define ITE(i,a,b) for(int i = a; i <= n; i++)
 
