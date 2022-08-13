@@ -45,7 +45,7 @@ return distance;
 
 /*
  
-// #2 More fast less good
+// #2 More fast less good // Shortest Path Faster Algorithm(SPFA)
 #define MAX LLONG_MAX
 const ll MAXN=1e17+10;
 vector <pair<ll,ll>> graf[MAXN]; // graph[ax].PB({bx,w})
