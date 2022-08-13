@@ -62,9 +62,7 @@ ll dijkstra (ll begin, ll end, ll n,ll x){ // n -> # Nodos; begin to end; x weig
     while(pending.size()>0){
         ll u = pending.front(),val;
         pending.pop();
-        
-        if(u==end) break;
-        
+             
         for(auto v: graf[u]){           
             val= distance[u] + v.second + x;            
             if(val < distance[v.first]){
