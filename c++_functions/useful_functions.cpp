@@ -41,6 +41,11 @@ void print (ll size, ll prin[])
 memset(arr, k, sizeof arr); 
 reverse(arr,arr+n);
 
+//QUEUE
+	-> The reason for this is that the default version of the C++ priority queue finds maximum elements, while we want to find minimum elements.
+priority_queue<pair<ll,ll>> que;
+queue <ll> que;
+
 	// Variable
 	
 //INT  ( 2*1e-9 <= x <= 2*1e9) (4 bytes)
