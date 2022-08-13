@@ -18,7 +18,7 @@ void bfs(ll begin, ll n){
         ll now = pending.front();
         pending.pop();
 
-        for(ll neighbor: graph[now]){
+        for(auto neighbor: graph[now]){
             if(distance[neighbor]==-1){
                 distance[neighbor]=distance[now]+1;                
                 pending.push(neighbor);                                                    
