@@ -13,7 +13,7 @@ void prim(ll n){ // primes with n >= 2
     while(i*i<n){ // i*i<n 2 to sqrt(n) // i<=n for all primes before n
         if(is_prime_num[i]!=-1){
             prime.push_back(i);
-            for(ll j=i; j <= n/i; j++){
+            for(ll j=i; j <= n/i; j++){ // for (int j = i * i; j <= n; j += i)
                 is_prime_num[i*j]=-1;
             }
         }
