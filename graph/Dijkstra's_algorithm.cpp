@@ -1,9 +1,5 @@
 //Algorithm or Logic: Dijkstra's algorithm
 //Complexity: O(n + m log m)
-// Finds shortest paths from the starting node to all nodes of the graph
-// minimum path with weights of begin (u) to end (v)
-// the algorithm requires that there are no negative weight edges in the graph
-//Also note that while there may be several instances of a node in the priority queue, only the instance with the minimum distance will be processed.
 
 // #1 the best
 const ll MAXN=1e17+10;
@@ -37,7 +33,12 @@ vector <ll> dijkstra (ll begin, ll n){
 return distance;
 }
 
-
+// Note
+// Finds shortest paths from the starting node to all nodes of the graph
+// minimum path with weights of begin (u) to end (v)
+// the algorithm requires that there are no negative weight edges in the graph
+// Also note that while there may be several instances of a node in the priority queue, only the instance with the minimum distance will be processed.
+// More info:
 // 2017_Book_GuideToCompetitiveProgramming.pdf pag 91
 // https://cp-algorithms.com/graph/dijkstra.html
 // https://brilliant.org/wiki/dijkstras-short-path-finder/
