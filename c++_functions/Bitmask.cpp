@@ -1,4 +1,4 @@
-// Algorithm or Logic: Bitmask/Bitmasking
+// Algorithm or Logic: Bit manipulation/Bitmask/Bitmasking
 // Complexity: O(n) 
 
 #define var n << b
