@@ -6,13 +6,13 @@ const ll MAXN= 1e17+10;
 vector <ll> graph[MAXN]; //graph[ax].PB(bx), graph[bx].PB(ax);
 //vector<ll> distance(MAXN);
  
-void bfs(ll n,ll p){
+void bfs(ll begin, ll n){
  
     queue<ll> pending;
     vector<ll> distance(n, -1);  
 
-    pending.push(p); //pending.push(0);
-    distance[p]=0; //  distance[0]=0;
+    pending.push(begin); //pending.push(0);
+    distance[begin]=0; //  distance[0]=0;
  
     while(pending.size() > 0){
         ll now = pending.front();
