@@ -9,7 +9,7 @@ vector <bool> visited(MAXN,false);
 void dfs(ll begin){
     visited[begin] = true;
     for (auto u: graph[begin]){
-        if(!visited[begin]) dfs(u);
+        if(!visited[u]) dfs(u);
     }
 }
 
