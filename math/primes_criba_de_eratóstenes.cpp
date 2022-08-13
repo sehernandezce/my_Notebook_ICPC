@@ -4,17 +4,17 @@
 
 vector <ll> prime;
 void prim(ll n){ // primes with n >= 2
-    ll num[n+5];
-    num[0]=-1;
-    num[1]=-1;
-    for(ll i=2; i<=n; i++) num[i]=i;
+    ll is_prime_num[n+5];
+    is_prime_num[0]=-1;
+    is_prime_num[1]=-1;
+    for(ll i=2; i<=n; i++) is_prime_num[i]=i;
 
     ll i=2;
     while(i*i<n){ // i*i<n 2 to sqrt(n) // i<=n for all primes before n
-        if(num[i]!=-1){
+        if(is_prime_num[i]!=-1){
             prime.push_back(i);
             for(ll j=i; j <= n/i; j++){
-                num[i*j]=-1;
+                is_prime_num[i*j]=-1;
             }
         }
         i++;
