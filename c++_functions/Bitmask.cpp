@@ -15,7 +15,7 @@ void bitmask(){
 // More info: https://www.youtube.com/watch?v=h6O6qVw0e5M&ab_channel=makigas%3Atutorialesdeprogramaci%C3%B3n
 // https://youtu.be/oL5bmRUbAJ4
 // mod(%) O(n^3)
-// Div(/) *Mult O(n^2)  
+// Div(/) Mult(*) O(n^2)  
 // bitwise O(n) 
 // Operator and(&) or(|) xor(^) not op(~)
 // left shift(<<) right shift op(>>)
