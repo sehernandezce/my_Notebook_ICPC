@@ -5,7 +5,7 @@
 const ll MAXN= 1e17+10;
 vector <ll> graph[MAXN]; //graph[ax].PB(bx), graph[bx].PB(ax);
 
-vector <bool> visited(MAXN,false);
+bool visited [MAXN];
 void dfs(ll begin){
     visited[begin] = true;
     for (auto u: graph[begin]){
