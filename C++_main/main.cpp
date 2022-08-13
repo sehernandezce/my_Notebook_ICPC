@@ -45,6 +45,7 @@ int main(){
         //freopen("output.txt", "w", stdout);
     #endif
     
+    //solv(); 
     int t;
     cin >> t;
     for(int i=0; i<t; i++) solv();   
