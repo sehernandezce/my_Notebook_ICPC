@@ -8,11 +8,11 @@ More info:
 #include <bits/stdc++.h>
 using namespace std;
 
+//#define int long long int
 #define F first 
 #define S second
 #define PB push_back
 #define MP make_pair
-#define int long long int
 #define MAX LLONG_MAX
 #define MIN LLONG_MIN
 #define endl '\n'
