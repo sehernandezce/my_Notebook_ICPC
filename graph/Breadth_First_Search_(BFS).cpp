@@ -3,7 +3,7 @@
 //Compute shortest paths.
 
 const ll MAXN= 1e17+10;
-vector <ll> graph[MAXN];
+vector <ll> graph[MAXN]; //graph[ax].PB(bx), graph[bx].PB(ax);
 //vector<ll> distance(MAXN);
  
 void bfs(ll n,ll p){
