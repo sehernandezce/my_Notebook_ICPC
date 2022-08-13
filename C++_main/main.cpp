@@ -12,10 +12,10 @@ using namespace std;
 #define S second
 #define PB push_back
 #define endl '\n'
-//#define int long long int
-//#define MP make_pair
 //#define MAX LLONG_MAX
 //#define MIN LLONG_MIN
+//#define int long long int
+//#define MP make_pair
 //#define ITE(i,a,b) for(int i = a; i <= n; i++)
 
 typedef long long ll; //typedef int td; // Define type data int as td
