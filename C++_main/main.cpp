@@ -35,7 +35,7 @@ int main(){
     ios::sync_with_stdio(0);
     cin.tie(0), cout.tie(0);
 
-    #ifndef ONLINE_JUDGE
+    #ifndef ONLINE_JUDGE  // #ifdef LOCALE
         freopen("input.txt", "r", stdin); //freopen("input.txt", "r", stdin);
         freopen("output.txt", "w", stdout); //freopen("output.txt", "w", stdout);       
     #endif
