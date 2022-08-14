@@ -25,13 +25,14 @@ void graph(ll n){ // n node , m edges
 
     // List edges O(m)
     vector<ll> graphedg [n];
+    
     vector<pair<ll,ll>> edges; 
     edges.push_back({i,j});
     graphedg[i].push_back(edges.size()-1);
     graphedg[j].push_back(edges.size()-1);
 
-    vector<pair<pair<ll,ll>,ll>> edges; // With weight w
-    edges.push_back({{i,j},w});
+    vector<tuple<ll,ll,ll>> edges; // vector<pair<pair<ll,ll>,ll>> edges; // With weight w
+    edges.push_back(make_tuple (i, j, w)); // auto e = edges[k] , tie(a, b, w) = e; // edges.push_back({{i,j},w});
     graphedg[i].push_back(edges.size()-1);
     graphedg[j].push_back(edges.size()-1);
 }
