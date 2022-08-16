@@ -3,8 +3,8 @@
 
 ll arr[MAXN];
 void bubble_sort(ll n){
-    for(int i=0; i<n; i++){
-        for(int j=0; j < n-1; j++){
+    for(ll i=0; i<n; i++){
+        for(ll j=0; j < n-1; j++){
             if(arr[j] > arr[j+1]){
                 swap(arr[j],arr[j+1]);
             }
