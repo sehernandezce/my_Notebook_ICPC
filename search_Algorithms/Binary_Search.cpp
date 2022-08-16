@@ -1,5 +1,5 @@
 //Algorithm or Logic: Binary Search 
-//Complexity: O(log N)
+//Complexity: O(N log N)
 
 ll binarySearch(ll size, ll value){ // N=size; search -> value O(log N)
     ll l=0,r=size-1;
