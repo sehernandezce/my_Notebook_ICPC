@@ -14,3 +14,15 @@ void sorted(){
     ll n=sizeof(arr)/sizeof(arr[0]); // Get the size
     sort(arr,arr+n); //reverse(arr,arr+n);
 }
+
+
+// Note
+/*
+
+bool comp(string a, string b) {
+if (a.size() == b.size()) return a < b;
+else return a.size() < b.size();
+}
+Now a vector of strings can be sorted as follows:
+sort(v.begin(), v.end(), comp);
+*/
