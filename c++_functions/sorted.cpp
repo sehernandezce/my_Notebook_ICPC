@@ -1,5 +1,5 @@
 //Algorithm or Logic: Sort 
-//Complexity: O(log N)
+//Complexity: O(Nlog N)
 
 const ll MAXN=9e17+10;
 ll arr[MAXN];
