@@ -50,7 +50,7 @@ void solv(){
 }
 
 int main(){
-    IO
+    IO;
     rwArchive();  
     solv(); 
     //tests();
