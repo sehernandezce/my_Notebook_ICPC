@@ -7,44 +7,66 @@ More info:
 */
 
 #include <bits/stdc++.h>
+
+#define fs first 
+#define sc second
+#define mp make_pair
+#define pb push_back
+#define all(s) s.begin(),s.end()
+#define allr(s) s.begin(),s.end()
+#define sz size
+#define len length
+#define forn(i,n) for(ll i = 0; i < (ll)(n); i++)
+#define foran(i,a,n) for(ll i = a; i < (ll)(n); i++)
+#define IO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+#define precise(n,k) fixed << setprecision(k) << n
+#define endl '\n'
+#define X real ()
+#define Y imag ()
+#define MAX LLONG_MAX
+#define MIN LLONG_MIN
+
 using namespace std;
 
-#define F first 
-#define S second
-#define PB push_back
-#define endl '\n'
-//#define MAX LLONG_MAX
-//#define MIN LLONG_MIN
-//#define int long long int
-//#define MP make_pair
-//#define ITE(i,a,b) for(int i = a; i <= n; i++)
+typedef long long ll;
+typedef complex<ll> P;
 
-typedef long long ll; //typedef int td; // Define type data int as td
+using ii=pair<ll,ll>;
+using iii=tuple<ll,ll,ll>;
 
-//using ii=pair<int,int>;
+const ll oo = 1e9+10;
+const double PI = 3.141592653589793;
 
-const int oo = 1*1e9+10; // INFN
-const int MAXN = 1e5+5;
+void rwArchive();
+void tests();
+//  BEGIN
+
+const ll MAXN = 1e5+5;
 
 void solv(){
-    int n;
+    ll n;
     cin >> n;
     cout << n << endl;    
 }
 
 int main(){
-    ios::sync_with_stdio(0);
-    cin.tie(0), cout.tie(0);
-
-    #ifndef ONLINE_JUDGE  // #ifdef LOCALE
-        freopen("input.txt", "r", stdin); //freopen("input.txt", "r", stdin);
-        freopen("output.txt", "w", stdout); //freopen("output.txt", "w", stdout);       
-    #endif
-    
-    //solv(); 
-    int t;
-    cin >> t;
-    for(int i=0; i<t; i++) solv();   
+    rwArchive();  
+    solv(); 
+    //tests();
     
     return 0;
+}
+
+//  END
+void rwArchive(){
+    #ifndef ONLINE_JUDGE  
+        freopen("input.txt", "r", stdin); 
+        freopen("output.txt", "w", stdout);
+    #endif
+}
+
+void tests(){
+    ll t;
+    cin >> t;
+    forn(i,t) solv();
 }
