@@ -49,10 +49,10 @@ queue <ll> que;
 
 	// Variable
 	
-//INT  ( 2*1e-9 <= x <= 2*1e9) (4 bytes)
+//INT  ( -2*1e9 <= x <= 2*1e9) (4 bytes)
 
 
-// Long (4 bytes) long long ( 9*1e-18 <= x <= 9*1e18) (8 bytes)
+// Long (4 bytes) long long ( -9*1e18 <= x <= 9*1e18) (8 bytes)
 
 // DOUBLE
 double 
