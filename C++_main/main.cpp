@@ -46,16 +46,20 @@ const ll MAXN = 1e5+5;
 void solv(){
     ll n;
     cin >> n;
-    cout << n << endl;    
+    cout << n;
+    
+    cout << endl;    
 }
 
 int main(){
     IO;
     rwArchive();  
+    //Begin 
+    
     solv(); 
     //tests();
     
-    
+
     return 0;
 }
 
