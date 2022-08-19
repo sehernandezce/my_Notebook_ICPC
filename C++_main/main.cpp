@@ -34,7 +34,7 @@ typedef complex<ll> P;
 using ii=pair<ll,ll>;
 using iii=tuple<ll,ll,ll>;
 
-const ll oo = 1e9+10;
+const ll oo = 1e18+10; // 1e9+10;
 const double PI = 3.141592653589793;
 
 void rwArchive();
