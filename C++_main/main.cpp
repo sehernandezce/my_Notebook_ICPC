@@ -41,7 +41,7 @@ void rwArchive();
 void tests();
 //  BEGIN
 
-const ll MAXN = 1e18+10; // 1e9+10;
+const ll MAXN = 1e5+10;
 
 void solv(){
     ll n;
