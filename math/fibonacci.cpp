@@ -36,9 +36,15 @@ using namespace std;
 typedef long long ll; 
 
 /* 
-ll fibo2(int i){
+bool is_computed[MAXN];
+ll F[MAXN];
+ll fibo2(ll i){
     if(i<2) return i;
-    return (fibo(i-1) + fibo(i-2));
+    if(is_computed[i]) return Fib[i];
+    
+    F[i] = fibo2(i-1) + f(i-2);
+    is_computed[i] = true;
+    return F[i];
 }
 
 
