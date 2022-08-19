@@ -44,6 +44,7 @@ reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 //QUEUE
 	-> The reason for this is that the default version of the C++ priority queue finds maximum elements, while we want to find minimum elements.
 priority_queue<pair<ll,ll>> que;
+priority_queue<ll> que;
 queue <ll> que;
 
 	// Variable
