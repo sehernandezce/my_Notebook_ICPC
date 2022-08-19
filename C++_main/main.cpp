@@ -8,7 +8,7 @@ More info:
 
 #include <bits/stdc++.h>
 
-#define fs first 
+#define fs first // struct
 #define sc second
 #define mp make_pair
 #define pb push_back
@@ -16,12 +16,12 @@ More info:
 #define allr(s) s.begin(),s.end()
 #define sz size
 #define len length
-#define forn(i,n) for(ll i = 0; i < (ll)(n); i++)
+#define forn(i,n) for(ll i = 0; i < (ll)(n); i++) // for, input, output
 #define foran(i,a,n) for(ll i = a; i < (ll)(n); i++)
 #define IO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
 #define precise(n,k) fixed << setprecision(k) << n
 #define endl '\n'
-#define X real ()
+#define X real () //Variables
 #define Y imag ()
 #define MAX LLONG_MAX
 #define MIN LLONG_MIN
@@ -34,14 +34,14 @@ typedef complex<ll> P;
 using ii=pair<ll,ll>;
 using iii=tuple<ll,ll,ll>;
 
-const ll oo = 1e18+10; // 1e9+10;
+const ll oo = 1e9+10;
 const double PI = 3.141592653589793;
 
 void rwArchive();
 void tests();
 //  BEGIN
 
-const ll MAXN = 1e5+5;
+const ll MAXN = 1e18+10; // 1e9+10;
 
 void solv(){
     ll n;
@@ -55,7 +55,7 @@ int main(){
     IO;
     rwArchive();  
     //Begin 
-    
+
     solv(); 
     //tests();
     
