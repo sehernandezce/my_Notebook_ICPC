@@ -23,6 +23,22 @@ ll sumS(ll x){
     return sum;
 }
 
+//Algorithm or Logic: Reconstruir el numero en base 10
+//Complexity: O(n)
+//
+ll num[MAXN];
+ll ok(ll base, ll size){ // num * base^0 + num * base^1 + num * base^2+ ... + num * base^exp 
+    ll bx=1,sum=0;
+    size-=1;
+    sum=num[size]; // binary if(num[size] == 1) sum <<= 1;
+    while(size--){
+        bx*=base; // bx++;
+        sum+=bx*num[size]; // if(num[size] == 1) sum<<=bx 
+    }
+
+  return sum;
+}
+
 //Algorithm or Logic: Find sqrt(x) with some precision
 //Complexity: O(nlogn)
 //
