@@ -6,7 +6,7 @@ ll binarySearch(ll size, ll target){
     ll l=0,r=size-1;
     while (l<=r)
     {   
-        ll mid = l + ((r+l) >> 1);
+        ll mid = l + ((r-l) >> 1);
         if(data[mid] == target) return mid;
         if(data[mid] > target) r=mid-1;
         else l=mid+1;
@@ -19,7 +19,7 @@ ll binarySearch(ll size, ll value){ // N=size; search -> value O(log N)
     ll l=0,r=size-1;
     while (l<=r)
     {   
-        ll mid = ((l+r) >> 1); //(n >> k) n/a^k
+        ll mid = l + ((r-l) >> 1); //  ((l+r) >> 1) // (n >> k) n/a^k
         if(data[mid]>=value) r=mid-1;
         else l=mid+1;
     }
