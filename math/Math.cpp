@@ -1,6 +1,19 @@
 //MATH
 //combinatorics, permutations and others
 
+//Algorithm or Logic: Given array find the subarray with the largest possible sum
+//Complexity: O(n)
+ll arr[MAXN];
+ll sumTMax(ll n){
+    ll best = 0, sum = 0;
+    forn(k,n){
+        sum = max(arr[k],sum+arr[k]);
+        best = max(best,sum);
+    }
+    return best;
+}
+
+
 //Algorithm or Logic: Number of pairs given n elements
 //Complexity: O(1)
 //
