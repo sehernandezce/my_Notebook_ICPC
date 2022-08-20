@@ -67,8 +67,8 @@ ll bs (ll x, ll err, ll k){
     ll l = 0.0, r = x;
     while(r - l > err){
         ll mid = l + ((r-l)/2);
-        if (ok(mid,k) >= x) r = mid; 
-        else l = mid;
+        if (ok(mid,k) < x) l = mid; 
+        else r = mid;
     }
     return l + ((r-l)/2);
 }
