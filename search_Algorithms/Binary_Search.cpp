@@ -15,6 +15,7 @@ ll binarySearch(ll size, ll target){
 }
 
 // ll i=lower_bound(v.begin(), v.end(), value) - v.begin() ; array -> ll i=lower_bound(dat,dat+n,k) - dat
+// // Busca el primero que no sea menor a a[i]
 ll binarySearch(ll size, ll value){ // N=size; search -> value O(log N)
     ll l=0,r=size-1;
     while (l<=r)
