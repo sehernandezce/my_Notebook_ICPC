@@ -39,6 +39,16 @@ ll ok(ll base, ll size){ // num * base^0 + num * base^1 + num * base^2+ ... + nu
   return sum;
 }
 
+//Algorithm or Logic: Función exponencial
+//Complexity: O(n)
+ll ok(ll a, ll x){ // a^x
+  ll ans=1;
+  while(x--){
+    ans*=a;
+  }
+  return ans;
+}
+
 //Algorithm or Logic: Find sqrt(x) with some precision
 //Complexity: O(nlogn)
 //
