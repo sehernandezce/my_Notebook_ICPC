@@ -62,6 +62,7 @@ stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into 
 replace(line.begin(),line.end(),x,y); // string line, x, y to replace x with y.
 stoi(s1.substr(i)); //for string to int
 s1.substr(i) // substring
+string s1=to_string(l) // for int to string
 
 	// MATH
 
