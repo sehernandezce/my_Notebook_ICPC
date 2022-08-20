@@ -55,7 +55,7 @@ queue <ll> que;
 // Long (4 bytes) long long ( -9*1e18 <= x <= 9*1e18) (8 bytes)
 
 // DOUBLE
-double 
+
 
 // STRING/ CHAR (1 bytes)
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case // int cmpS = strcmp(&sax[0],&s2ax[0]); // a b -> cmpS -1 < 0 ; b a -> cmpS 1 > 0
@@ -68,6 +68,10 @@ string s1=to_string(l) // for int to string
 
 sqrt(a,b); // Square root
 floor(d); // Funcion piso
+log10(x);
+log(x); //Ln(x)
+log2(x);
+
 
 	
 	
