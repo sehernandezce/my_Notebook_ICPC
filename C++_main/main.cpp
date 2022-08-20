@@ -13,7 +13,7 @@ More info:
 #define mt make_tuple
 #define pb push_back
 #define all(s) s.begin(),s.end()
-#define allr(s) s.begin(),s.end()
+#define allr(s) s.rbegin(),s.rend()
 #define sz size
 #define len length
 #define forn(i,n) for(ll i = 0; i < (ll)(n); i++) // for, input, output
