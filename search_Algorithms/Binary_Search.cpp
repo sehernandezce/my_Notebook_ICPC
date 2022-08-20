@@ -1,7 +1,7 @@
 //Algorithm or Logic: Binary Search 
 //Complexity: O(N log N)
 
-// Best version
+// version 1
 ll binarySearch(ll size, ll target){
     ll l=0,r=size-1;
     ll ans=-1;
@@ -14,7 +14,7 @@ ll binarySearch(ll size, ll target){
     return ans; 
 }
 
-// basic Version 
+// Version 2
 ll binarySearch(ll size, ll value){ // N=size; search -> value O(log N)
     ll l=0,r=size-1;
     while (l<=r)
