@@ -14,13 +14,11 @@ ll sumN(ll n){
 //Complexity: O(?)
 //
 
-ll sumS(ll x)
-{
+ll sumS(ll x){
     ll sum = 0;
     while(x){
         sum += (x%10);
         x/=10;
     }
-
     return sum;
 }
