@@ -3,7 +3,6 @@
 //Euclidean algorithm:  GCD(a,b) = GCD(b,r) : a= x*b + r  GCD(a,0)=a.
 
 ll gcd1(ll a, ll b) {
-    ll aux;
     while (b) { // b != 0
         a %= b;  // a=r  mcd(r,b)
         swap(a, b); // mcd(b,r)
