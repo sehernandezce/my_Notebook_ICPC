@@ -71,7 +71,7 @@ floor(d); // Funcion piso
 log10(x);
 log(x); //Ln(x)
 log2(x);
-
+ceil(x); //Funcion techo
 
 	
 	
