@@ -26,3 +26,15 @@ ll binarySearch(ll size, ll value){ // N=size; search -> value O(log N)
     }
     return l==size ? -1 : l; // ans is l  
 }
+
+///
+ll arr[MAXN];
+void bs2(ll n, ll x){
+    ll k = 0;
+    for(ll b = n/2; b>=1; b/=2){
+        while(k+b <n && arr[k+b] <=x) k +=b;
+    }
+    if(arr[k] == x){
+        // x found at index K
+    }
+}
