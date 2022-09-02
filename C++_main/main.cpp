@@ -65,3 +65,40 @@ void rwArchive(){
 }
 
 //made by Sebastian
+
+/*
+#include <bits/stdc++.h>
+
+#define forn(i,n) for(ll i = 0; i < (ll)(n); i++)
+#define foran(i,a,n) for(ll i = (ll)(a); i < (ll)(n); i++)
+#define IO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+#define precise(n,k) fixed << setprecision(k) << n
+#define endl '\n'
+
+using namespace std;
+
+typedef long long ll;
+
+const ll oo = 1e18+10; // 1e9+10;
+
+//  BEGIN
+
+const ll MAXN = 1e4+5;
+
+int main(){
+    IO; 
+    
+    //Begin
+
+    ll n;
+    cin >> n;
+    cout << n << endl;
+    
+    //End
+    return 0;
+}
+
+//  END
+//made by ...
+
+*/
