@@ -6,20 +6,20 @@ typedef complex<C> P;
 
 #define X real ()
 #define Y imag ()
-
-struct points{
+struct segment{
     TD x, y, z;
 
-    points() {}
-    points(TD x,TD y, TD z): x(x), y(y), z(z) {}
-    points& operator +=(const points &ax){
+    segment() {}
+    segment(TD x,TD y, TD z): x(x), y(y), z(z) {}
+    
+    segment& operator +=(const segment &ax){
         x += ax.x;
         y += ax.y;
         z += ax.z;
         return *this;
     }
 
-    points& operator-=(const points &t) {
+    segment& operator-=(const segment &t) {
         x -= t.x;
         y -= t.y;
         z -= t.z;
@@ -27,75 +27,75 @@ struct points{
     }
 
     // k * V k es un escalar
-    points& operator*=(TD t) {
+    segment& operator*=(TD t) {
         x *= t;
         y *= t;
         z *= t;
         return *this;
     }
-    points& operator/=(TD t) {
+    segment& operator/=(TD t) {
         x /= t;
         y /= t;
         z /= t;
         return *this;
     }
 
-    points operator +(const points &ax){
-        return points(*this) += ax;
+    segment operator +(const segment &ax){
+        return segment(*this) += ax;
     }   
     
-    points operator-(const points &t) const {
-        return points(*this) -= t;
+    segment operator-(const segment &t) const {
+        return segment(*this) -= t;
     }
 
-    points operator*(TD t) const {
-        return points(*this) *= t;
+    segment operator*(TD t) const {
+        return segment(*this) *= t;
     }
-    points operator/(TD t) const {
-        return points(*this) /= t;
+    segment operator/(TD t) const {
+        return segment(*this) /= t;
     }
 
     //Dot product
-    TD dot(points a, points b){
+    TD dot(segment a, segment b){
         return a.x * b.x + a.y * b.y + a.z * b.z;
     }
 
-    TD norm(points a) {
+    TD norm(segment a) {
     return dot(a, a);
     }
-    double abs(points a) {
+    double abs(segment a) {
         return sqrt(norm(a));
     }
-    double proj(points a, points b) {
+    double proj(segment a, segment b) {
         return dot(a, b) / abs(b);
     }
-    double angle(points a, points b) {
+    double angle(segment a, segment b) {
         return acos(dot(a, b) / abs(a) / abs(b));
     }
 
     // Cross product
-    points cross(points a, points b) {
-    return points(a.y * b.z - a.z * b.y,
+    segment cross(segment a, segment b) {
+    return segment(a.y * b.z - a.z * b.y,
                    a.z * b.x - a.x * b.z,
                    a.x * b.y - a.y * b.x);
     }
 
-    TD triple(points a, points b, points c) {
+    TD triple(segment a, segment b, segment c) {
         return dot(a, cross(b, c));
     }
     
     // Line intersection
-    points intersect(points a1, points d1, points a2, points d2) {
+    segment intersect(segment a1, segment d1, segment a2, segment d2) {
        // return a1 + cross(a2 - a1, d2) / cross(d1, d2) * d1;
     }
 
     //Plane 
-    points intersect(points a1, points n1, points a2, points n2, points a3, points n3) {
-        points x(n1.x, n2.x, n3.x);
-        points y(n1.y, n2.y, n3.y);
-        points z(n1.z, n2.z, n3.z); 
-        points d(dot(a1, n1), dot(a2, n2), dot(a3, n3));
-        return points(triple(d, y, z),
+    segment intersect(segment a1, segment n1, segment a2, segment n2, segment a3, segment n3) {
+        segment x(n1.x, n2.x, n3.x);
+        segment y(n1.y, n2.y, n3.y);
+        segment z(n1.z, n2.z, n3.z); 
+        segment d(dot(a1, n1), dot(a2, n2), dot(a3, n3));
+        return segment(triple(d, y, z),
                     triple(x, d, z),
                     triple(x, y, d)) / triple(n1, n2, n3);
     }
