@@ -4,7 +4,7 @@
 // version 1
 ll binarySearch(ll size, ll target){
     ll l=0,r=size-1;
-    while (l<=r)
+    while (l<=r) // (r-l > 1)  // answer may be in r
     {   
         ll mid = l + ((r-l) >> 1);
         if(dat[mid] == target) return mid;
