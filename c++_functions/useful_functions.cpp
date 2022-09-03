@@ -8,15 +8,26 @@ set<ll> st;
 
 pair<ll,ll> pa;
 
+	//INPUT
 // For an interactive problem
 cout << "? " << q <<endl;
 cout.flush();
-//
-//
+//For read double
+canf("%d %lf", &score, &c); 
+printf("%.10f\n", c);
+/*
+u unsigned int
+d int
+f float
+c char
+s string
+lf double
+ld long long int
+Lf long double
+.9 precision 9 decimals	
+*/
 
-vector<ll> vec(n, k); // Fill the vector with k
-memset(arr, k, sizeof arr); // Fill the array with k
-ll ans=1,b=10; ans*=b; // ans=b^p; ans=10^p
+
 
 	// Structure
 //SET 
