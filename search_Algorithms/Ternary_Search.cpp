@@ -19,4 +19,5 @@ dd SearchTer(dd f[], ll l, ll r, dd err){
 //Note
 //Buscar el máximo de la función unimodal f() dentro de [l,r]
 //Para encontrar el minimo, invierta la instrucción if / else o invierta la comparación
+// Sirve para hallar el mínimo de una función que es concava
 
