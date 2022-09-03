@@ -8,7 +8,12 @@ set<ll> st;
 
 pair<ll,ll> pa;
 
+// For an interactive problem
+cout << "? " << q <<endl;
+cout.flush();
 //
+//
+
 vector<ll> vec(n, k); // Fill the vector with k
 memset(arr, k, sizeof arr); // Fill the array with k
 ll ans=1,b=10; ans*=b; // ans=b^p; ans=10^p
