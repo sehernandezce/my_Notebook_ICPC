@@ -34,18 +34,26 @@ Lf long double
 	-> Sets are containers that store unique elements following a specific order.
 	-> The value of the elements in a set cannot be modified once in the container
 	-> find O(log n) 
+	-> set is based on a balanced binary search tree and its operations work in O(log n) time
 set<ll> st;
 st.inset(a); // ll a;
 st.find(a); // ss.find(a)!=ss.end() Exists a
 auto s1_Iter = s1.begin( );  ll elem1= *s1_Iter; // get the first element
 st.size();
+*st.lower_bound(x)
+unordered_set <ll> st; // -> unordered_set is based on a hash table and its operations work, on average in O(1) time
+multiset <ll> stm;
+unordered_multiset <ll> stum
 
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
+	-> map is based on a balanced binary search tree and accessing elements takes O(log n) time.
+	-> unordered_map uses hashing and accessing elements takes O(1) time on average.
 map <ll,ll> mp; // map <key,data> mp;
 mp[k] = d; // ll k,d;
 mp[i].first // key
 mp[i].second //data
+mp.count("Key") //The function count checks if a key exists in a map
 
 //VECTOR
 vector<ll> vec;
@@ -58,9 +66,10 @@ memset(arr, k, sizeof arr);
 reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 
 //QUEUE
-	-> The reason for this is that the default version of the C++ priority queue finds maximum elements, while we want to find minimum elements.
-priority_queue<pair<ll,ll>> que;
+	->  the elements in a C++ priority queue are sorted in decreasing order, and it is possible to find and remove the largest element in the queue.
+		
 priority_queue<ll> que;
+priority_queue<int,vector<int>,greater<int>> que; // If we want to create a priority queue that supports finding and removing the smallest element
 queue <ll> que;
 
 	// Variable
@@ -70,8 +79,11 @@ queue <ll> que;
 
 // Long (4 bytes) long long ( -9*1e18 <= x <= 9*1e18) (8 bytes)
 
-// DOUBLE
 
+// FLOAT (4 bytes) Format IEEE 754
+ +/- 3.4 e +/- 38 ~7 digits
+// DOUBLE (8 bytes)
++/- 1.7e +/- 308 ~15 digits
 
 // STRING/ CHAR (1 bytes)
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case // int cmpS = strcmp(&sax[0],&s2ax[0]); // a b -> cmpS -1 < 0 ; b a -> cmpS 1 > 0
