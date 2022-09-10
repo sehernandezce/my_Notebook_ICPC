@@ -5,7 +5,6 @@ ll arr[n];
 vector<ll> vec;
 queue<ll> que;
 set<ll> st;
-
 pair<ll,ll> pa;
 
 	//INPUT
@@ -25,6 +24,9 @@ lf double
 ld long long int
 Lf long double
 .9 precision 9 decimals	
+string s;
+scanf("%s", &n[0]);
+printf("Hola %s\n", &n[0]);
 */
 
 
