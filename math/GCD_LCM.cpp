@@ -1,5 +1,6 @@
 //Algorithm or Logic: Greatest common divisor (GCD)
 //Complexity: O( log(min(a, b))
+// CC++ Ya trae el gcd
 //Euclidean algorithm:  GCD(a,b) = GCD(b,r) : a= x*b + r  GCD(a,0)=a.
 
 ll gcd1(ll a, ll b) {
