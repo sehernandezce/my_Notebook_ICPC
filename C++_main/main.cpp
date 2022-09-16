@@ -17,7 +17,7 @@ More info:
 using namespace std;
 
 typedef long long ll;
-const ll oo = 1e18+10; // 1e9+10;
+const ll oo = LLONG_MAX; // ll(5*1e18)+9LL; // LLONG_MIN 
 const double PI = 3.141592653589793;
 void rwArchive();
 
@@ -75,7 +75,7 @@ typedef complex<ll> cc;
 using ii=pair<ll,ll>;
 using iii=tuple<ll,ll,ll>;
 
-const ll oo = 1e18+10; // 1e9+10;
+const ll oo = LLONG_MAX; // ll(5*1e18)+9LL; // LLONG_MIN // 1e9+10;
 const dd PI = 3.141592653589793;
 
 void rwArchive();
