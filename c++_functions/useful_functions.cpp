@@ -80,7 +80,7 @@ queue <ll> que;
 
 
 // Long (4 bytes) long long ( -9*1e18 <= x <= 9*1e18) (8 bytes)
-
+const ll MOD = (1LL << 32) - 1; // For mod32
 
 // FLOAT (4 bytes) Format IEEE 754
  +/- 3.4 e +/- 38 ~7 digits
