@@ -1,4 +1,6 @@
 // C++ useful functions
+//g++ -o main main.cpp -Wall -Wextra -Wshadow
+//./main
 
 //
 ll arr[n];
