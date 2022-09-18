@@ -98,12 +98,12 @@ string s1=to_string(l) // for int to string
 
 sqrt(a,b); // Square root
 floor(d); // Funcion piso
+ceil(x); //Funcion techo
 log10(x);
 log(x); //Ln(x)
 log2(x);
-ceil(x); //Funcion techo
 pow(a, b) //a ^ b = %f\n",
-a & b // For mod  a % b
+
 	
 	
 	
