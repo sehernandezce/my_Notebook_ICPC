@@ -104,6 +104,18 @@ log(x); //Ln(x)
 log2(x);
 pow(a, b) //a ^ b = %f\n",
 
+	//Templates
+//https://cplusplus.com/doc/oldtutorial/templates/
+//Function templates are special functions that can operate with generic types. 
+//This allows us to create a function template whose functionality can be adapted to more than one type or class without repeating the entire code for each type.
+#define error(args...) { string _s = #args; replace(_s.begin(), _s.end(), ',', ' '); stringstream _ss(_s); istream_iterator<string> _it(_ss); err(_it, args); }
+
+void err(istream_iterator<string> it) {}
+template<typename T, typename... Args>
+void err(istream_iterator<string> it, T a, Args... args) {
+	cerr << *it << " = " << a << endl;
+	err(++it, args...);
+}
 	
 	
 	
