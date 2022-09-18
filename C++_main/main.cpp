@@ -11,7 +11,7 @@ More info:
 #define forn(i,n) for(ll i = 0; i < (ll)(n); i++)
 #define foran(i,a,n) for(ll i = (ll)(a); i < (ll)(n); i++)
 #define precise(n,k) fixed << setprecision(k) << n
-#define IO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+#define IO ios_base::sync_with_stdio(false), cin.tie(nullptr); //cout.tie(0);
 #define endl '\n'
 
 using namespace std;
@@ -58,7 +58,7 @@ void rwArchive(){
 #define len length
 #define forn(i,n) for(ll i = 0; i < (ll)(n); i++) // for, input, output
 #define foran(i,a,n) for(ll i = (ll)(a); i < (ll)(n); i++)
-#define IO ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
+#define IO ios_base::sync_with_stdio(false), cin.tie(nullptr); //cout.tie(0);
 #define precise(n,k) fixed << setprecision(k) << n
 #define endl '\n'
 #define X real () //Variables
