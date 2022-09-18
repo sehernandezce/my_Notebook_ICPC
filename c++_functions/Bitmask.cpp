@@ -19,3 +19,8 @@ void bitmask(){
 // bitwise O(n) 
 // Operator and(&) or(|) xor(^) not op(~)
 // left shift(<<) right shift op(>>)
+    // equivalent
+//or(|) -> sum(+) , Union(U)
+//and(&) -> intersection(), product(*), extracting bits
+// More info: https://es.wikipedia.org/wiki/L%C3%B3gica_binaria
+// https://es.wikipedia.org/wiki/Operador_a_nivel_de_bits
