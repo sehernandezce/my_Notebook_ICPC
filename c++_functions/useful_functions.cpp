@@ -58,6 +58,7 @@ mp[k] = d; // ll k,d;
 mp[i].first // key
 mp[i].second //data
 mp.count("Key") //The function count checks if a key exists in a map
+unordered_map <ll, ll> ump; // Cannot declare a pair as a key
 
 //VECTOR
 vector<ll> vec;
