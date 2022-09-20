@@ -99,6 +99,7 @@ stoi(s1.substr(i)); //for string to int
 s1.substr(i) // substring
 string s1=to_string(l) // for int to string
 c.compare("V") // Compare two strings
+a = count(s1.begin(), s1.end(), X); // string x = 's' 
 
 	// MATH
 
