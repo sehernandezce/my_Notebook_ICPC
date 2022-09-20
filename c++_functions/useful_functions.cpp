@@ -98,6 +98,7 @@ replace(line.begin(),line.end(),x,y); // string line, x, y to replace x with y.
 stoi(s1.substr(i)); //for string to int
 s1.substr(i) // substring
 string s1=to_string(l) // for int to string
+c.compare("V") // Compare two strings
 
 	// MATH
 
