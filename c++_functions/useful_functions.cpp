@@ -76,8 +76,10 @@ reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 	->  the elements in a C++ priority queue are sorted in decreasing order, and it is possible to find and remove the largest element in the queue.
 		
 priority_queue<ll> que;
-priority_queue<int,vector<int>,greater<int>> que; // If we want to create a priority queue that supports finding and removing the smallest element
+priority_queue<int,vector<int>,greater<int>> que; // priority_queue<int, vector<int>, decltype(cmp)> 
+// If we want to create a priority queue that supports finding and removing the smallest element
 queue <ll> que;
+ 
 
 	// Variable
 	
