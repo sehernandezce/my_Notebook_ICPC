@@ -103,7 +103,7 @@ string s1=to_string(l) // for int to string
 c.compare("V") // Compare two strings
 a = count(s1.begin(), s1.end(), X); // string x = 's' 
 tolower(s1[0]) // convert to lowercase
-strlwr(s1) // convert to lowercase
+strlwr(&s1[0]) // convert to lowercase
 
 	// MATH
 
