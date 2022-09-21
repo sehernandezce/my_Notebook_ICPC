@@ -111,6 +111,12 @@ isupper(s[0])
 sqrt(a,b); // Square root
 floor(d); // Funcion piso
 ceil(x); //Funcion techo
+round(x); // Redondea a siguiente
+trunc(x); // redondea a cero
+value   round   floor   ceil    trun
+3.8     4.0     3.0     4.0     3.0
+5.5     6.0     5.0     6.0     5.0
+
 log10(x);
 log(x); //Ln(x)
 log2(x);
