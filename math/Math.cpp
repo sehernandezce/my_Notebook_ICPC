@@ -1,6 +1,11 @@
 //MATH
 //combinatorics, permutations and others
 
+//Algorithm or Logic: number of digits for factorial
+//Complexity: O(n)
+
+//n = 1 + floor(log10(n) + log10(n-1) + log10(n-2) + ... log10(1))  
+
 //Algorithm or Logic: Given array find the subarray with the largest possible sum
 //Complexity: O(n)
 ll arr[MAXN];
