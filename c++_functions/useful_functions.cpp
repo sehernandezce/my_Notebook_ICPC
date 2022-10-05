@@ -71,6 +71,7 @@ ump.insert({s,0});
 void print (ll size, ll prin[])
 memset(arr, k, sizeof arr); 
 reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
+auto r = equal_range (arr, arr+n, x); // Returns a range containing all elements equivalent to value in the range [first, last).
 
 //QUEUE
 	->  the elements in a C++ priority queue are sorted in decreasing order, and it is possible to find and remove the largest element in the queue.
