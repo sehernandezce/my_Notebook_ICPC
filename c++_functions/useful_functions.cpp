@@ -46,8 +46,10 @@ auto s1_Iter = s1.begin( );  ll elem1= *s1_Iter; // get the first element
 st.size();
 *st.lower_bound(x)
 unordered_set <ll> st; // -> unordered_set is based on a hash table and its operations work, on average in O(1) time
-multiset <ll> stm;
+multiset <ll> stm; // Can contain multiple instances of an element
 unordered_multiset <ll> stum
+st.erase(n);// Remove all instances of an element
+st.erase(s.find(n)); // Only one instance should be removed
 
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
@@ -72,6 +74,7 @@ void print (ll size, ll prin[])
 memset(arr, k, sizeof arr); 
 reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 auto r = equal_range (arr, arr+n, x); // Returns a range containing all elements equivalent to value in the range [first, last).
+random_shuffle(arr,arr+n);
 
 //QUEUE
 	->  the elements in a C++ priority queue are sorted in decreasing order, and it is possible to find and remove the largest element in the queue.
@@ -99,13 +102,15 @@ const ll MOD = (1LL << 32) - 1; // For mod32
 stricmp(&s1[0],&s2[0]); // string s1,s2 compare two strings without taking into account the case // int cmpS = strcmp(&sax[0],&s2ax[0]); // a b -> cmpS -1 < 0 ; b a -> cmpS 1 > 0
 replace(line.begin(),line.end(),x,y); // string line, x, y to replace x with y.
 stoi(s1.substr(i)); //for string to int
-s1.substr(i) // substring
+s1.substr(i,k);// posittion i and has lenght k
 string s1=to_string(l) // for int to string
 c.compare("V") // Compare two strings
 a = count(s1.begin(), s1.end(), X); // string x = 's' 
 tolower(s1[0]) // convert to lowercase
 strlwr(&s1[0]) // convert to lowercase
 isupper(s[0]) 
+
+fint(c); // Finds the position of the firt ocurrence of a substring c.
 
 	// MATH
 
