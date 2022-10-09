@@ -157,5 +157,11 @@ void err(istream_iterator<string> it, T a, Args... args) {
 	err(++it, args...);
 }
 	
+template<class T>
+struct Point3D {
+	T x;
+	T y;
+	T z;
+};
 	
 	
