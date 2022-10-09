@@ -48,6 +48,7 @@ st.size();
 unordered_set <ll> st; // -> unordered_set is based on a hash table and its operations work, on average in O(1) time
 multiset <ll> stm; // Can contain multiple instances of an element
 unordered_multiset <ll> stum
+s.count(k) //  how many k are there
 st.erase(n);// Remove all instances of an element
 st.erase(s.find(n)); // Only one instance should be removed
 
