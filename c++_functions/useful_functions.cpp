@@ -83,8 +83,24 @@ priority_queue<ll> que;
 priority_queue<int,vector<int>,greater<int>> que; // priority_queue<int, vector<int>, decltype(cmp)> 
 // If we want to create a priority queue that supports finding and removing the smallest element
 queue <ll> que;
+
+//DEQUEUE
+
+//STACK
  
 
+//BISET
+	-> A bitset is an array whose each value is either 0 or 1.
+	-> bitset only requires n bits of memory
+	-> Can to use bit operations: | & ^
+
+bitset<10> bst; //
+bst[3] = 1; //
+bitset<10> bst(string("0010011010")); // from right to left
+cout << bst[4] << "\n"; // 1
+cout << bst[5] << "\n"; // 0
+bst.count() // The function count returns the number of ones in the bitset
+	
 	// Variable
 	
 //INT  ( -2*1e9 <= x <= 2*1e9) (4 bytes)
