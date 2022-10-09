@@ -17,7 +17,7 @@ void bitmask(){
 // mod(%) O(n^3)
 // Div(/) Mult(*) O(n^2)  
 // bitwise O(n) 
-// Operator and(&) or(|) xor(^) not op(~)
+// Operator and(&) or(|) xor(^) not op(!)
 // left shift(<<) right shift op(>>)
     // equivalent
 //or(|) -> sum(+) , Union(U)
