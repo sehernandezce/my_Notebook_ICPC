@@ -1,6 +1,7 @@
 // C++ useful functions
 //g++ -o main main.cpp -Wall -Wextra -Wshadow
 //./main
+//diff output.txt  isoutput.txt
 
 //
 ll arr[n];
