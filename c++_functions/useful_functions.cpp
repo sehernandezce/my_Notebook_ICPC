@@ -4,6 +4,7 @@
 //In linux
 //./main input.txt output.txt
 //diff output.txt  isoutput.txt
+//https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
 
 //
 ll arr[n];
