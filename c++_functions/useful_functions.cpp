@@ -1,6 +1,8 @@
 // C++ useful functions
 //g++ -o main main.cpp -Wall -Wextra -Wshadow
 //./main
+//In linux
+//./main input.txt output.txt
 //diff output.txt  isoutput.txt
 
 //
