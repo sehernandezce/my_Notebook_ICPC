@@ -4,7 +4,8 @@
 //In linux
 //./main input.txt output.txt
 //diff output.txt isoutput.txt
-//diff -y --suppress-common-lines -b output.txt isoutput.txt // Compare changes without considering spaces
+//diff -y --suppress-common-lines -b output.txt isoutput.txt
+//diff --suppress-common-lines -b output.txt isoutput.txt // Compare changes without considering spaces
 //https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
 
 //
