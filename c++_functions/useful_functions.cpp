@@ -150,6 +150,7 @@ log10(x);
 log(x); //Ln(x)
 log2(x);
 pow(a, b) //a ^ b = %f\n",
+hypot(a,b) // hypotenuse
 
 	//Templates
 //https://cplusplus.com/doc/oldtutorial/templates/
