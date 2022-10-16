@@ -1,8 +1,8 @@
 // C++ useful functions
 //g++ -o main main.cpp -Wall -Wextra -Wshadow
-//./main
-//In linux
 //./main input.txt output.txt
+//In linux
+//./main <input.txt> output.txt
 //diff output.txt isoutput.txt
 //diff -y --suppress-common-lines -b output.txt isoutput.txt
 //diff --suppress-common-lines -b output.txt isoutput.txt // Compare changes without considering spaces
