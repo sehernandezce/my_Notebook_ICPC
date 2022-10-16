@@ -22,5 +22,6 @@ void bitmask(){
     // equivalent
 //or(|) -> sum(+) , Union(U)
 //and(&) -> intersection(), product(*), extracting bits
+//__builtin_popcount(x) // count 1
 // More info: https://es.wikipedia.org/wiki/L%C3%B3gica_binaria
 // https://es.wikipedia.org/wiki/Operador_a_nivel_de_bits
