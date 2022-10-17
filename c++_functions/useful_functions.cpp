@@ -76,7 +76,7 @@ ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
 ump.insert({s,0});
 
-//ARRAY
+//ARRAY max size <= 1e6
 void print (ll size, ll prin[])
 memset(arr, k, sizeof arr);  // k = 0 ó -1 
 fill(arr,arr+n,val); // Assigns val to all the elements in the range [first,last).
