@@ -187,4 +187,6 @@ struct Point3D {
 	T z;
 };
 	
-	
+	//Sort ans function cmp
+bool cmp(pair<int,int> x, pair<int,int> y) {return x.second < y.second;}
+sort(movie.begin(),movie.end(),cmp);
