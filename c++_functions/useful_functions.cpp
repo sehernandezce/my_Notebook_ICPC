@@ -78,7 +78,8 @@ ump.insert({s,0});
 
 //ARRAY
 void print (ll size, ll prin[])
-memset(arr, k, sizeof arr); 
+memset(arr, k, sizeof arr);  // k = 0 ó -1 
+fill(arr,arr+n,val); // Assigns val to all the elements in the range [first,last).
 reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 auto r = equal_range (arr, arr+n, x); // Returns a range containing all elements equivalent to value in the range [first, last).
 random_shuffle(arr,arr+n);
