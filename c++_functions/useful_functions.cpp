@@ -139,7 +139,7 @@ a = count(s1.begin(), s1.end(), X); // string x = 's'
 tolower(s1[0]) // convert to lowercase
 strlwr(&s1[0]) // convert to lowercase
 isupper(s[0]) 
-
+s1.append(s2); // Extends the string by appending additional characters at the end of its current value
 fint(c); // Finds the position of the firt ocurrence of a substring c.
 
 	// MATH
