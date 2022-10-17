@@ -37,6 +37,8 @@ scanf("%s", &n[0]);
 printf("Hola %s\n", &n[0]);
 */
 
+//Input
+for (int& t: x) cin >> t;
 
 
 	// Structure
