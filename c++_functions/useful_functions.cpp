@@ -114,6 +114,12 @@ bitset<10> bst(string("0010011010")); // from right to left
 cout << bst[4] << "\n"; // 1
 cout << bst[5] << "\n"; // 0
 bst.count() // The function count returns the number of ones in the bitset
+
+//Tuple
+tuple<type1, type2, ..., typeN> t;
+make_tuple(a, b, c, ..., d) //Returns a tuple with values written in the brackets.
+get<i>(t); // Returns the i'th element of the tuple t. Can also be used to change the element of a tuple.
+tie(a, b, c, ..., d) = t // Assigns a, b, c, ..., d to the elements of the tuple $t$ accordingly.
 	
 	// Variable
 	
