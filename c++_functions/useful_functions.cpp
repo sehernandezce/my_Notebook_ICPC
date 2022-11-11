@@ -166,6 +166,13 @@ log(x); //Ln(x)
 log2(x);
 pow(a, b) //a ^ b = %f\n",
 hypot(a,b) // hypotenuse
+	
+	//Timer
+auto start = chrono::steady_clock::now();
+ auto end = chrono::steady_clock::now();
+    cout << "Elacpsed time in milliseconds :"
+         <<chrono::duration_cast<chrono::milliseconds>(end-start).count()
+         << " ms"<< endl;
 
 	//Templates
 //https://cplusplus.com/doc/oldtutorial/templates/
