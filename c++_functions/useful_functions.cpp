@@ -71,7 +71,10 @@ using namespace __gnu_pbds;
 
 template<typename T>
 using ordered_set = tree<T, null_type,less<T>, rb_tree_tag,tree_order_statistics_node_update>;
+ordered_set orset;
 
+orset.find_by_order();
+orset.order_of_key();
 
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
