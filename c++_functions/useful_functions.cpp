@@ -60,6 +60,19 @@ s.count(k) //  how many k are there
 st.erase(n);// Remove all instances of an element
 st.erase(s.find(n)); // Only one instance should be removed
 
+	//Policy - Based Data Structures
+	//https://gcc.gnu.org/onlinedocs/libstdc++/ext/pb_ds/
+	//https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/
+// Header files, namespaces,
+// macros as defined above
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+using namespace __gnu_pbds;
+
+template<typename T>
+using ordered_set = tree<T, null_type,less<T>, rb_tree_tag,tree_order_statistics_node_update>;
+
+
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
 	-> map is based on a balanced binary search tree and accessing elements takes O(log n) time.
