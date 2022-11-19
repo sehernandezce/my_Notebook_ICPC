@@ -67,7 +67,7 @@ ll ok(ll a, ll x){ // a^x
   return ans;
 }
 
-//Algorithm or Logic: Función exponencial
+//Algorithm or Logic: Función potencia rapida
 //Complexity: O(log n)
 typedef long long ll;
 ll expfast(ll b, ll e){
