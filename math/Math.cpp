@@ -71,8 +71,8 @@ ll ok(ll a, ll x){ // a^x
 //Complexity: O(log n)
 typedef long long ll;
 ll expfast(ll b, ll e){
-    if(e & 0LL) return 1;
-    if(e & 1) return (expfast(b*b,e >> 1) * b);
+    if(e == 0LL) return 1;
+    if(e & 1LL) return (expfast(b*b,e >> 1) * b);
     return expfast(b*b, e >> 1);
 }
 
