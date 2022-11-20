@@ -89,10 +89,27 @@ unordered_map <ll, ll> ump; // Cannot declare a pair as a key
 ump.find(s) != ump.end() // to know if the key exists 
 
 //VECTOR
+	//https://codeforces.com/blog/entry/74684
 vector<ll> vec;
 ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
 ump.insert({s,0});
+
+// removes consecutive duplicates and returns the end of the resulting iterator range
+sort(all(vec)); 
+vec.resize(unique(all(vec)) - vec.begin());
+
+//if you need to fill it by consecutive numbers, you can use
+ iota(all(vec), 0);
+
+//where you need sometimes to cyclically shift a vector by k
+rotate(vec.begin(), vec.begin() + k, vec.end()); // rotate(begin, middle, end)
+
+//Merge two vector
+//akes 5 arguments: begin and end of one interval to merge, 
+//begin and end of the second interval to merge, and where to write the result. 
+nodes[v].resize(nodes[2 * v].size() + nodes[2 * v + 1].size()); 
+merge(all(nodes[2 * v]), all(nodes[2 * v + 1]), nodes[v].begin());
 
 //ARRAY max size <= 1e6
 void print (ll size, ll prin[])
@@ -182,6 +199,7 @@ log(x); //Ln(x)
 log2(x);
 pow(a, b) //a ^ b = %f\n",
 hypot(a,b) // hypotenuse
+int x = min({a, b, c, d});
 	
 	//Timer
 auto start = chrono::steady_clock::now();
