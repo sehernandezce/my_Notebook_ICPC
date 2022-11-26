@@ -119,6 +119,7 @@ fill(arr,arr+n,val); // Assigns val to all the elements in the range [first,last
 reverse(arr,arr+n); //  int n = sizeof(arr) / sizeof(arr[0]);
 auto r = equal_range (arr, arr+n, x); // Returns a range containing all elements equivalent to value in the range [first, last).
 random_shuffle(arr,arr+n);
+accumulate (numbers, numbers+n, init, myfunction);
 
 //QUEUE
 	->  the elements in a C++ priority queue are sorted in decreasing order, and it is possible to find and remove the largest element in the queue.
