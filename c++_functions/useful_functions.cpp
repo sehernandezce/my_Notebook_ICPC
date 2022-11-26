@@ -94,6 +94,7 @@ vector<ll> vec;
 ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
 ump.insert({s,0});
+accumalte(vec.begin(),vec.end(), 0LL);
 
 // removes consecutive duplicates and returns the end of the resulting iterator range
 sort(all(vec)); 
