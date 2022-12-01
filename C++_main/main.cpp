@@ -77,7 +77,7 @@ int main(){
 
 //  END
 void rwArchive(){
-    //#ifndef ONLINE_JUDGE  
+    //#ifdef LOCALNZN
        freopen("input.txt", "r", stdin); 
        freopen("output.txt", "w", stdout);  
    // #endif
