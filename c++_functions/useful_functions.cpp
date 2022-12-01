@@ -1,9 +1,10 @@
 // C++ useful functions
 //In windows
-//g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp" && main
+//g++ -DLOCALNZN -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp" && main <input.txt> output.txt
 //In linux
 //g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "%e" "%f"
 //g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -c "%f"
+//g++ -DLOCALNZN -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp" && ./main <input.in> output.out
 //./main <input.txt> output.txt
 //diff output.txt isoutput.txt
 //diff -y --suppress-common-lines -b output.txt isoutput.txt
