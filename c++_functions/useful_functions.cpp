@@ -1,6 +1,6 @@
 // C++ useful functions
 //In windows
-//g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp"
+//g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp" && main
 //In linux
 //g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "%e" "%f"
 //g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -c "%f"
