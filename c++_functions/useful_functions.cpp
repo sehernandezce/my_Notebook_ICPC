@@ -1,5 +1,6 @@
 // C++ useful functions
 //In windows
+//g++ -DLOCALNZN -std=c++11 -O2 -Wconversion -Wshadow -Wall -Wextra -o "main" "main.cpp" && main <input.txt> output.txt
 //g++ -DLOCALNZN -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "main" "main.cpp" && main <input.txt> output.txt
 //In linux
 //g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "%e" "%f"
