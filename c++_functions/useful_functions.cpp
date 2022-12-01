@@ -1,7 +1,9 @@
 // C++ useful functions
 //g++ -o main main.cpp -Wall -Wextra -Wshadow
+//g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -c "%f"
 //./main input.txt output.txt
 //In linux
+//g++ -DLOCAL -std=c++11 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -c "%f"
 //./main <input.txt> output.txt
 //diff output.txt isoutput.txt
 //diff -y --suppress-common-lines -b output.txt isoutput.txt
