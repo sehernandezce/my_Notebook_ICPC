@@ -240,3 +240,8 @@ sort(movie.begin(),movie.end(),cmp);
 
 	//for each
 for(auto& c: mp){}
+
+// Function lambda
+auto pref = [&](int i, int j) -> ll{return ar[j] - ar[i-1];}; 
+
+
