@@ -246,5 +246,6 @@ for(auto& c: mp){}
 
 // Function lambda
 auto pref = [&](int i, int j) -> ll{return ar[j] - ar[i-1];}; 
+sort(begin(v),end(v),[](const Edge& x, const Edge& y) { return x.w < y.w; });
 
 
