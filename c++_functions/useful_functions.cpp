@@ -64,6 +64,9 @@ s.count(k) //  how many k are there
 st.erase(n);// Remove all instances of an element
 st.erase(s.find(n)); // Only one instance should be removed
 
+bool cmp(const Edge& x, const Edge& y) { return x.w < y.w; }
+set<Edge,bool(*)(const Edge&,const Edge&)> v(cmp); // Set with function comp
+
 	//Policy - Based Data Structures
 	//https://gcc.gnu.org/onlinedocs/libstdc++/ext/pb_ds/
 	//https://www.geeksforgeeks.org/ordered-set-gnu-c-pbds/
