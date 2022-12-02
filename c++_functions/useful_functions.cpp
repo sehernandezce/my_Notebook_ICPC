@@ -232,6 +232,9 @@ struct Point3D {
 	T x;
 	T y;
 	T z;
+	bool operator< (const Point3D &p){
+		return true;
+	}
 };
 	
 	//Sort ans function cmp
