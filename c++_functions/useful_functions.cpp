@@ -251,4 +251,16 @@ for(auto& c: mp){}
 auto pref = [&](int i, int j) -> ll{return ar[j] - ar[i-1];}; 
 sort(begin(v),end(v),[](const Edge& x, const Edge& y) { return x.w < y.w; });
 
+//
+int last_true(int lo, int hi, function<bool(int)> f){}
+last_true(1, 2e9, [&](int x) {
+		// Returns true if the median can be raised to x
+		long long ops_needed = 0;
+		for (int i = (size - 1) / 2; i < size; i++) {
+			ops_needed += max(0, x - arr[i]);
+		}
+		return ops_needed <= max_ops;
+	})
+	
+	
 
