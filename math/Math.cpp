@@ -76,6 +76,16 @@ ll expfast(ll b, ll e){
     return expfast(b*b, e >> 1);
 }
 
+ll expFastItr(ll a, ll b, ll mod){
+    ll x = 1LL;
+    for(int i = (int)log2(b)+1; i >=0; i--){
+        x *= x; x %= mod;
+        if(b & (1LL << i)) x*=a;
+        x %= mod;
+    }
+    return x;
+}
+
 //Algorithm or Logic: Find sqrt(x) with some precision
 //Complexity: O(nlogn)
 //
