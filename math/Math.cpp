@@ -28,6 +28,15 @@ ll sumN(ll n){
     return n*(n+1)/2;
 }
 
+//Algorithm or Logic: Dividers of a
+//Complexity: O(aloga)
+for(int j = 2; j*j <= a; j++){
+  if(a%j== 0){
+   div.push_back(j);
+   div.push_back(a/j);
+   }
+}
+
 //Algorithm or Logic: sum of the digits of the number n
 //Complexity: O(?)
 //
