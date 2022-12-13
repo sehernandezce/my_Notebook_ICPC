@@ -10,6 +10,7 @@ struct info{ // Can be Change!
 
 //Algorithm or Logic: Segment Tree
 //Complexity: update/query : O(log n) space: O(4*n)
+// 1 to n (segmentTree) // array of value (0 to n-1) // query/udpate are 1 to n
 template<class T>
 struct segTree{
     int n; 
@@ -44,8 +45,8 @@ struct segTree{
         T p1 = query(left(p), L, mid, i, j);
         T p2 = query(right(p), mid+1, R, i, j);
 
-        if(p1 > -1) return p2;
-        if(p2 > -1) return p1;
+        if(p1 > -1) return p2; // Can be Change!
+        if(p2 > -1) return p1; // Can be Change!
 
         return (mrg(p1,p2));
     }
