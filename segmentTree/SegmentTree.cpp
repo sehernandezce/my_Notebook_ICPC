@@ -76,7 +76,7 @@ struct segTree{
     }
     void DoUpdate(int ind, T valNew){update(1,0,n-1,ind-1,valNew);}
 };
-//Create Segmen Tree
+//Create Segment Tree
 //vector<info> st(4*n); /*tree.assign(4*n,0)*/
 //segTree<info> myTree(n,st,ar); // ar[i] = {ax,i};
 //
