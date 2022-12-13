@@ -1,3 +1,4 @@
+//
 struct info{ // Can be Change!
     ll mn;
     int pos;
@@ -75,4 +76,8 @@ struct segTree{
     }
     void DoUpdate(int ind, T valNew){update(1,0,n-1,ind-1,valNew);}
 };
+//Create Segmen Tree
+//vector<info> st(4*n); /*tree.assign(4*n,0)*/
+//segTree<info> myTree(n,st,ar); // ar[i] = {ax,i};
+//
 //
