@@ -251,6 +251,12 @@ for(auto& c: mp){}
 auto pref = [&](int i, int j) -> ll{return ar[j] - ar[i-1];}; 
 sort(begin(v),end(v),[](const Edge& x, const Edge& y) { return x.w < y.w; });
 
+function<void(int)> dfs = [&](int p) -> void{
+        vis[p] = 1;
+        for(auto u: adj[p]){
+            if(vis[u] == 0) dfs(u);
+        }
+    };
 //
 int last_true(int lo, int hi, function<bool(int)> f){}
 last_true(1, 2e9, [&](int x) {
