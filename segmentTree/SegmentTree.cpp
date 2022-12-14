@@ -11,6 +11,7 @@ struct info{ // Can be Change!
 //Algorithm or Logic: Segment Tree
 //Complexity: update/query : O(log n) space: O(4*n)
 // 1 to n (segmentTree) // array of value (0 to n-1) // query/udpate are 1 to n
+// Update k-position / Query Range
 template<class T>
 struct segTree{
     int n; 
