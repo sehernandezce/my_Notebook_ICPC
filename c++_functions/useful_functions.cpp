@@ -267,6 +267,7 @@ last_true(1, 2e9, [&](int x) {
 		}
 		return ops_needed <= max_ops;
 	})
-	
+//Assert
+assert(x == 1); // Finaliza el programa si la expresion retorna 0
 	
 
