@@ -16,3 +16,13 @@ void dfs(ll begin){
 // Note
 // n is the number of nodes
 // It does not compute minimum changes, it makes deep tours
+
+//Longest Path
+vector<int> dp(MAXN, -1);
+void dfs(int p){
+    dp[p] = 0;
+    for(auto& u: adj[p]){
+        if(dp[u] == -1) dfs(u);
+        dp[p] = max(dp[p],dp[u]+1);
+    }
+} 
