@@ -53,28 +53,45 @@ bool isCycleNeg(){
 // A more advanced variant is the SPFA algorithm (“Shortest Path Faster Algorithm”)
 // The Bellman–Ford algorithm can also be used to check if the graph contains a cycle with negative length
 
-/*
-    edges.push_back(make_tuple (i, j, w));
-    graph[i].push_back(edges.size()-1);
-    graph[j].push_back(edges.size()-1);
-*/
-/*
-// Check
-
-    // ? what type graph? 
-    ll bfa(ll edg, ll m){
-            if(m == 0) {
-                if( edg == 0) return 0;
-                else return oo;
+//3
+vector<int> tree(MAXN,-1);
+vector<ll> dist(MAXN,oo);
+int bellman(){
+    int x;
+    for(int i = 1; i <= n; i++){
+        x =-1;
+        for(auto& e: listEdge){
+            int u = e.second.first, v = e.second.second;
+            ll w = e.first;
+            if(dist[u]+w < dist[v]){
+                dist[v] = w+dist[u];
+                tree[v] = u;
+                x = v;
             }
         }
-
-        ll result = bfa(edg, m-1);
-
-        for(auto neighbour: edges[edg]){
-            ll now = neighbour.second + bfa(neighbour.first, m-1);
-            result = min(result, now);
-        }
-        return result;
     }
+    return x;
+}
+
+/* Obtener el camino de un ciclo Negativo
+int is = bellman();
+    if(is == -1) cout << "NO" << endl;
+    else {
+        for(int i = 1; i <= n; ++i)
+		{
+			is = tree[is];
+		}
+        vector<int> cycle;
+        for(int v = is; ; v = tree[v]){
+            cycle.push_back(v);
+            if(v == is && cycle.size() > 1) break;
+        }
+		reverse(cycle.begin(), cycle.end());
+        cout << "YES" << endl;
+        for(auto& e: cycle){
+            cout << e << " ";
+        }
+        cout << endl;
+    }
+
 */
