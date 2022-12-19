@@ -19,6 +19,35 @@ void bfa(ll begin, ll m){ // m edges
     }
 }
 
+// 2
+vector<int> tree(MAXN,-1);
+vector<ll> dist(MAXN,oo);
+void bellman(int p){
+    dist[p] = 0;
+    tree[p] = 0;
+    for(int i = 0; i < n-1; i++){
+        for(int node = 1; node <= n; node++){
+            for(auto& u: adj[node]){
+                if(dist[u.second]>dist[node] + u.first) tree[u.second] = node;
+                dist[u.second] = min(dist[u.second], dist[node] + u.first);
+            }
+        }
+    }
+}
+
+bool isCycleNeg(){
+    //bool hasNegCycle = false;
+    for(int node = 1; node<=n; node++){
+        for(auto& u: adj[node]){
+            if(dist[u.second] > dist[node]+u.first){
+                //hasNegCycle = true;
+                return 1;
+            }
+        }
+    }
+    return 0;
+}
+
 // Note
 // The code assumes that the graph is stored as an edge list edges (lista de aristas)
 // A more advanced variant is the SPFA algorithm (“Shortest Path Faster Algorithm”)
