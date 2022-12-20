@@ -53,6 +53,30 @@ void dijkstra(int p){
     }
 }
 
+//longest path
+vector<int> tree(MAXN,0);
+vector<ll> dist(MAXN,oo);
+void dijkstra(int p){
+    priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> pending;
+    // vector <int> processed (n+1,  0);
+    dist[p] = 0;
+    pending.push({0,p});
+
+    while(pending.size()){
+        pair<ll,int> front = pending.top(); pending.pop();
+        int node = front.second; ll w = front.first;
+        if(w > dist[node]) continue; // processed[u]
+        for(auto& u: adj[node]){
+            if(dist[node]+u.first < dist[u.second]){
+                tree[u.second] = node;
+                dist[u.second] = dist[node]+u.first;
+                pending.push({dist[u.second],u.second});
+            }
+        }
+    }
+}
+
+
 // Note
 // Finds shortest paths from the starting node to all nodes of the graph
 // minimum path with weights of begin (u) to end (v)
