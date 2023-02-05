@@ -38,6 +38,7 @@ for(int j = 2; j*j <= a; j++){
 }
 
 /////
+    ll ans = 1;
     vector<int> exp; // prime factorization
         for(int k = 0; 1LL * prime[k]*prime[k] <= x; k++){
             int cnt = 0;
