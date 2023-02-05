@@ -21,6 +21,17 @@ void prim(ll n){ // primes with n >= 2
     }
 }
 
+
+int sieve[MAXN];
+void criba(int N){
+    for(int i = 2; i <= N; i++){
+        if(sieve[i]) continue;
+        for(int j = i; j <= N; j+=i){
+            sieve[j] = i;
+        }
+    }
+}
+
 /*
     ll n;
     cin >> n;
