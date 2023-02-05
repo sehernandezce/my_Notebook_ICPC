@@ -37,6 +37,21 @@ for(int j = 2; j*j <= a; j++){
    }
 }
 
+/////
+    vector<int> exp; // prime factorization
+        for(int k = 0; 1LL * prime[k]*prime[k] <= x; k++){
+            int cnt = 0;
+            while(x%prime[k] == 0){
+                //cout << x << " " << prime[k] << endl;
+                x/=prime[k];
+                cnt ++;
+                //if(ans == 10) break;
+            }
+            //exp.push_back(cnt);
+            ans *= (cnt+1LL);
+        }
+        if(x > 1) ans*=(2LL); //exp.push_back(1);
+
 //Algorithm or Logic: sum of the digits of the number n
 //Complexity: O(?)
 //
