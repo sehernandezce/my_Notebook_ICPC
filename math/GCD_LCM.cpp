@@ -17,6 +17,19 @@ ll gcdr(ll a, ll b) {
     return gcdr(b, a%b);
 }
 
+ll gcd_ext(ll a, ll b, ll& x, ll& y){
+    if(b == 0){
+        x = 1;
+        y = 0;
+        return a;
+    }
+    ll x1, y1;
+    ll d = gcd_ext(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a/b);
+    return d;
+}
+
 //Algorithm or Logic: Least common multiple (LCM)
 //Complexity: O( log(min(a, b))
 //The least common multiple of two numbers is equal to the product of the numbers divided by their greatest common factor.
