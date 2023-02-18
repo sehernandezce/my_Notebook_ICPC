@@ -29,11 +29,18 @@ ll bfs(ll ini,int n, ll &dist){
 
 
 //Longest Path for DAG
-vector<int> dp(MAXN, -1);
-void dfs(int p){
-    dp[p] = 0;
-    for(auto& u: adj[p]){
-        if(dp[u] == -1) dfs(u);
-        dp[p] = max(dp[p],dp[u]+1);
+vector<int> dp(MAXN,-1), vis1(MAXN,0), visn(MAXN,0);
+void dfsLP(int u){
+    dp[u] = 0;
+   //cout << " +NODE+ " << u << endl;
+    for(auto& v: adj[u]){
+        //cout << "NODE " << u << " -> " << v << endl;
+        //if(!vis1[v] || !visn[v]) continue;
+        if(dp[v] == -1) {dfsLP(v);}
+        if(dp[u] < dp[v] + 1){
+            dp[u] = dp[v] + 1;
+            //tree[u] = v;
+        }
     }
-} 
+    //cout << " -NODE- " << u << endl;
+}
