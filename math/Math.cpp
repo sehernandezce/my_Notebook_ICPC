@@ -92,6 +92,26 @@ ll ok(ll a, ll x){ // a^x
   return ans;
 }
 
+//Algorithm or Logic: Suma de divisores
+//Complexity: O(n)
+ll sumDiv(ll n){
+    ll pid = 0, p = primes[pid], ans = 1;
+    while(p*p <= n){
+        ll power = 0;
+        while(n%p == 0){
+            n/=p;
+            power++;
+        }
+        ans*= ((fastpow(p,power+1,MOD)-1LL)*(fastpow(p-1,MOD-2LL,MOD))) % MOD;
+        ans %= MOD;
+        p = primes[++pid];
+    }
+    if(n!=1) ans*= (fastpow(n,2,MOD)-1LL)*(fastpow(n-1,MOD-2LL,MOD));
+    ans %= MOD;
+    return ans;
+}
+
+
 //Algorithm or Logic: Función potencia rapida
 //Complexity: O(log n)
 typedef long long ll;
