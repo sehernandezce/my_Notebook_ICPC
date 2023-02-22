@@ -111,6 +111,14 @@ ll sumDiv(ll n){
     return ans;
 }
 
+//Algorithm or Logic: Numero de divisores 
+//Complexity: O(nlog n)
+int numDiv[MAXN];
+void go(int n){
+    for(int i = 1; i <=n; i++){
+        for(int j = i; j <=n; j += i) numDiv[j]++;
+    }
+}
 
 //Algorithm or Logic: Función potencia rapida
 //Complexity: O(log n)
