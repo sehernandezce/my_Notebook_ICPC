@@ -15,3 +15,6 @@ void FloydW(){
         }
     }
 }
+
+// matrixAdj[ax][bx] = min(w,matrixAdj[ax][bx]);
+// matrixAdj[bx][ax] = min(w,matrixAdj[ax][bx]);
