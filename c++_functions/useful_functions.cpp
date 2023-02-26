@@ -270,4 +270,4 @@ last_true(1, 2e9, [&](int x) {
 //Assert
 assert(x == 1); // Finaliza el programa si la expresion retorna 0
 	
-
+cout << fixed << setprecision(6) << ans << endl;
