@@ -16,5 +16,5 @@ vector<int> topSort(vector<vector<int>>& g, vector<int>& inGrade) {
 }
 
 /*
-adj[i].push_back(k); inGrade[k]++;
+adj[i].push_back(k); inGrade[i]++;
 */
