@@ -1,5 +1,5 @@
 //Algorithm or Logic: UnionFind
-// Complexity : O(?)
+// Complexity : O(m log n)
 // Saber si existen ciclos en un grafo no dirigido conexo. O conocer los componentes.
 // Para conjuntos disyuntos.
 struct UnionFind{
