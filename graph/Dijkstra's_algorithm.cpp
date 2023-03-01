@@ -87,36 +87,3 @@ void dijkstra(int p){
 // https://cp-algorithms.com/graph/dijkstra.html
 // https://brilliant.org/wiki/dijkstras-short-path-finder/
 // https://rosettacode.org/wiki/Dijkstra%27s_algorithm
-
-/*
- 
-// #2 More fast less good // se parece mas a Shortest Path Faster Algorithm(SPFA)
-#define MAX LLONG_MAX
-const ll MAXN=1e17+10;
-vector <pair<ll,ll>> graf[MAXN]; // graph[ax].PB({bx,w})
-
-ll dijkstra (ll begin, ll end, ll n,ll x){ // n -> # Nodos; begin to end; x weight extra
-
-    vector <ll> distance(n+1,  MAX);
-    queue <ll> pending;
-
-    pending.push(begin);
-    distance[begin]=x; // distance[begin]=0;
-
-    while(pending.size()>0){
-        ll u = pending.front(),val;
-        pending.pop();
-             
-        for(auto v: graf[u]){           
-            val= distance[u] + v.second + x;            
-            if(val < distance[v.first]){
-               distance[v.first]=val;
-               pending.push(v.first);
-            }           
-        }
-    }
-
-
-    return distance[end] == MAX ? -1 : distance[end];
-}
-*/
