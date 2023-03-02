@@ -1,5 +1,6 @@
 //Algorithm or logic: Successor paths/ functional graphs
 // Complexity: O(Nlogk) queries: log(k)
+// Solo funciona en grafos dirigido con outdegree == 1 para todos los nodos
 int memo[N][31];
 int succ(int x, int i){ // 2^i
     if(i == 0) return memo[x][0];
