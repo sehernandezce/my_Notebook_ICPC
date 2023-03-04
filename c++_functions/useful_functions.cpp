@@ -105,7 +105,7 @@ accumulate(vec.begin(),vec.end(), 0LL);
 
 // removes consecutive duplicates and returns the end of the resulting iterator range
 sort(all(vec)); 
-vec.resize(unique(all(vec)) - vec.begin());
+vec.resize(unique(all(vec)) - vec.begin()); // Funciona para vectores y strings
 
 //if you need to fill it by consecutive numbers, you can use
  iota(all(vec), 0);
@@ -186,11 +186,12 @@ s1.substr(i,k);// posittion i and has lenght k
 string s1=to_string(l) // for int to string
 c.compare("V") // Compare two strings
 a = count(s1.begin(), s1.end(), X); // string x = 's' 
-tolower(s1[0]) // convert to lowercase
+(char)tolower(s1[0]) // convert to lowercase the char s1[0]
+(char)toupper(s1[0]) // convert to uppercase the char s1[0]
 strlwr(&s1[0]) // convert to lowercase
-isupper(s[0]) 
+isupper(s[0]) // is uppercase? 1 yes  | 0 no
 s1.append(s2); // Extends the string by appending additional characters at the end of its current value
-fint(c); // Finds the position of the firt ocurrence of a substring c.
+find(c); // Finds the position of the firt ocurrence of a substring c.
 
 	// MATH
 
