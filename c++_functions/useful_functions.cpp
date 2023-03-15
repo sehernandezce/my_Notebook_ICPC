@@ -16,6 +16,15 @@
 //diff --suppress-common-lines -b output.txt isoutput.txt // Compare changes without considering spaces
 //https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
 
+/*
+Tener encuenta
+Usar siempre vectores
+declara parejas con make_pair
+Al asignar tamaño a un arreglo usar una variable constante.
+Long double es distinto a double 
+
+*/
+
 //
 ll arr[n];
 vector<ll> vec;
