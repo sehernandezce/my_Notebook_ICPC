@@ -106,6 +106,7 @@ ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
 ump.insert({s,0});
 accumulate(vec.begin(),vec.end(), 0LL);
+ll l = (lower_bound(vc.begin(),vc.end(), make_pair(hs+1,ws+1)) - vc.begin());
 
 // removes consecutive duplicates and returns the end of the resulting iterator range
 sort(all(vec)); 
@@ -276,3 +277,4 @@ last_true(1, 2e9, [&](int x) {
 assert(x == 1); // Finaliza el programa si la expresion retorna 0
 	
 cout << fixed << setprecision(6) << ans << endl;
+auto [h,w] = vc[i];
