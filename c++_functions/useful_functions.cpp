@@ -106,7 +106,7 @@ ll a(vector<int> &v, int &val) // refer (&) to a vector
 vector<ll> vec(n, k); // Fill the vector with k
 ump.insert({s,0});
 accumulate(vec.begin(),vec.end(), 0LL);
-ll l = (lower_bound(vc.begin(),vc.end(), make_pair(hs+1,ws+1)) - vc.begin());
+ll l = (lower_bound(vc.begin(),vc.end(), make_pair(hs+1,ws+1)) - vc.begin()); // indice desde 0
 
 // removes consecutive duplicates and returns the end of the resulting iterator range
 sort(all(vec)); 
