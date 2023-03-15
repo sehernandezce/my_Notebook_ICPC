@@ -17,11 +17,13 @@
 //https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
 
 /*
-Tener encuenta
+Tener encuenta IMPORTANTE!!!!!!!!!
+
 Usar siempre vectores
 declara parejas con make_pair
 Al asignar tamaño a un arreglo usar una variable constante.
 Long double es distinto a double 
+
 
 */
 
