@@ -77,38 +77,39 @@ struct segTree{
 };
 ////// SEGMENT TREE
 typedef long long T;
-T segTree[4*N];
-ll data[N];
+T segTree[8*N];
+T neutro = 0;
 
-T mrg(T data1, T data2){
-    return data1+data2;
+T mrg(T d1, T d2){
+    return __gcd(d1,d2);
 }
 
-void update(T nodeP, int l, int r, T newV, int posV){
+void update(int p, int l, int r, T val, int pos){
     if(l == r){
-        segTree[nodeP] = newV; 
+        segTree[p] = val;
         return;
     }
     int mid = l + ((r-l)>>1);
-    T nodeL = (nodeP*2), nodeR = (nodeP*2)+1; 
-    if(posV > mid) update(nodeR, mid+1, r, newV, posV);
-    else update(nodeL, l, mid, newV, posV);
-    segTree[nodeP] = mrg(segTree[nodeL],segTree[nodeR]);
+    int lef = (p << 1), rig = (p<<1) + 1;
+    if(mid < pos) update(rig,mid+1,r, val, pos);
+    else update(lef, l, mid, val, pos);
+    segTree[p] = mrg(segTree[lef], segTree[rig]);
     return;
 }
 
-T query(T nodeP, int l, int r, int i, int j){
-    if(l >= i && r <= j) return segTree[nodeP];
-    if(l > j || r < i)  return -oo; // Usar un valor neutro
+T query(int p, int l, int r, int i, int j){
+    if(l >= i && j >= r) return segTree[p];
+    if(l > j  || r < i) return neutro;
 
-    int mid = l + ((r-l)>>1);   
-    T nodeL = (nodeP*2), nodeR = (nodeP*2)+1; 
-    T dataL = query(nodeL, l, mid, i, j), dataR = query(nodeR, mid+1, r, i, j);
+    int mid = l + ((r-l)>>1);
+    int lef = (p << 1), rig = (p<<1) + 1;
+    T vlef = query(lef, l, mid, i, j);
+    T vrig = query(rig, mid+1, r, i, j);
     
-    if(dataL == -oo) return dataR;
-    if(dataR == -oo) return dataL;
+    if(dataL == neutro) return dataR;
+    if(dataR == neutro) return dataL;
 
-    return  mrg(dataL, dataR);
+    return mrg(vlef, vrig);
 }
 // update(1,0,n-1, newV, posV)
 // query(1,0,n-1, i, j) 
