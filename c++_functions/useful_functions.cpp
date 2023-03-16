@@ -23,6 +23,7 @@ Usar siempre vectores
 declara parejas con make_pair
 Al asignar tamaño a un arreglo usar una variable constante.
 Long double es distinto a double 
+NO usar .count para saber si existe en un multiset !!!!!
 
 
 */
