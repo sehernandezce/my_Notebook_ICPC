@@ -38,6 +38,7 @@ struct indexTree{
 };
 //
 
+int n;
 ll bit[200002];
 void update(int pos, ll val) {
 	for (; pos <= n; pos += pos & -pos) bit[pos] += val;
