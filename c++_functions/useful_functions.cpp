@@ -79,6 +79,7 @@ unordered_multiset <ll> stum
 s.count(k) //  how many k are there
 st.erase(n);// Remove all instances of an element
 st.erase(s.find(n)); // Only one instance should be removed
+set<char>(s.begin(), s.end())
 
 bool cmp(const Edge& x, const Edge& y) { return x.w < y.w; }
 set<Edge,bool(*)(const Edge&,const Edge&)> v(cmp); // Set with function comp
@@ -290,3 +291,4 @@ assert(x == 1); // Finaliza el programa si la expresion retorna 0
 	
 cout << fixed << setprecision(6) << ans << endl;
 auto [h,w] = vc[i];
+set<char>(s.begin(), s.end())
