@@ -99,7 +99,7 @@ void update(T nodeP, int l, int r, T newV, int posV){
 
 T query(T nodeP, int l, int r, int i, int j){
     if(l >= i && r <= j) return segTree[nodeP];
-    if(l > j || r < i)  return -oo;
+    if(l > j || r < i)  return -oo; // Usar un valor neutro
 
     int mid = l + ((r-l)>>1);   
     T nodeL = (nodeP*2), nodeR = (nodeP*2)+1; 
