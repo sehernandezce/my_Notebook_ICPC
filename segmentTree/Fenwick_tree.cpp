@@ -37,3 +37,15 @@ struct indexTree{
     }
 };
 //
+
+ll bit[200002];
+void update(int pos, ll val) {
+	for (; pos <= n; pos += pos & -pos) bit[pos] += val;
+}
+
+ll query(int a, int b) {
+	ll ans = 0;
+	for (; b; b -= b & -b) ans += bit[b];
+	for (a--; a; a -= a & -a) ans -= bit[a];
+	return ans;
+}
