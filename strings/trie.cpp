@@ -73,3 +73,30 @@ int main(){
 
     return 0;
 }
+
+/// Revisar!!!
+//
+struct trie
+{
+    bool end;
+    map<char,trie> son;
+    trie () { end = false;}
+
+    void insert(string &s){
+        Trie *t = this;
+        for(auto& c: s){
+            t = &t->son[c];
+        }
+        t->end = true;
+    }
+
+    bool search(string &s){
+        Trie *t = this;
+        for(auto& c: s){
+            if(t->son.find(c) != t->son.end()) t = &t->son[c];
+            else return false;
+        }
+        return t->end;
+    }
+};
+//
