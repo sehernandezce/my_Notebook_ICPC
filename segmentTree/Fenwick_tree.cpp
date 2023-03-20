@@ -38,6 +38,7 @@ struct indexTree{
 };
 //
 
+///REVISAR!!
 int n;
 ll bit[200002];
 void update(int pos, ll val) {
