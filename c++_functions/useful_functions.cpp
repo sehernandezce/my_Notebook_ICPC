@@ -95,10 +95,12 @@ using namespace __gnu_pbds;
 
 template<typename T>
 using ordered_set = tree<T, null_type,less<T>, rb_tree_tag,tree_order_statistics_node_update>;
-ordered_set<int> orset;
+ordered_set<int> ost;
 
-orset.find_by_order();
-orset.order_of_key();
+//Busca por posicion (0  a n -1)
+orset.find_by_order(); ///   auto ans = ost.find_by_order(k-1); //  cout << -(*ans) << endl; 
+//Busca por elemento
+orset.order_of_key(); // ost.order_of_key(14);
 
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
