@@ -19,3 +19,29 @@ ll binom(ll n, ll r){
     if(n<r || n<0 || r<0) return 0;
     return (((fac[n]*facInv[r])%MOD)*(facInv[n-r]))%MOD;
 }
+
+
+///Con el triangulo de pascal
+
+const int limit = 20;
+
+ll pascal[N][limit];
+
+int bino(int n){
+    pascal[0][0] = 1;
+    for(int i = 1; i < n; i++){
+        pascal[i][0] = 1;
+        if(i < limit) pascal[i][i] = 1;
+        for(int j = 1; j < min(i, limit); j++){
+           pascal[i][j] = pascal[i-1][j] + pascal[i-1][j-1];
+           if(pascal[i][j] > oo){
+              pascal[i][j] = oo;
+           }
+           if(pascal[i][2] > oo){
+                // cout << i << " " << j << " " << pascal[i][2] << " " << pascal[i][j] << endl; // 44722
+                return i;
+           }
+        }
+    }
+    return n;
+}
