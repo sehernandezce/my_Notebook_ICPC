@@ -20,9 +20,10 @@
 Tener encuenta IMPORTANTE!!!!!!!!!
 
 Usar siempre vectores
-declara parejas con make_pair
+declara parejas con make_pair y las tuplas como make_tuple
 Al asignar tamaño a un arreglo usar una variable constante.
 Long double es distinto a double 
+Evitar el uso de double
 NO usar .count para saber si existe en un multiset !!!!!
 Para corregir el error de presicion de una sqrt x = sqrt(n)-5; While (x*x<n) ++x;
 
