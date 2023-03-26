@@ -19,7 +19,7 @@
 /*
 Tener encuenta IMPORTANTE!!!!!!!!!
 
-Usar siempre vectores
+Usar siempre vectores si N es muy grande
 declara parejas con make_pair y las tuplas como make_tuple
 Al asignar tamaño a un arreglo usar una variable constante.
 Long double es distinto a double 
