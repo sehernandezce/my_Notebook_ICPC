@@ -20,3 +20,29 @@ int succ(int x, int i){ // 2^i
             }
         }
 */
+
+
+// Enconrar ciclos y su tamaño en un grafo dirigido con outdegree == 1
+ll cal(int x){
+    // Encontrar el ciclo
+    int a = succ(x, 0), b = succ(succ(x, 0), 0);
+    while(a != b){
+        a = succ(a, 0);
+        b = succ(succ(b, 0), 0);
+    }
+
+    // Encontrar el inicio del ciclo
+    a = x;
+    while(a != b){
+        a = succ(a, 0);
+        b = succ(b, 0);
+    }
+    //Encontrar el tamanio del ciclo
+    ll lenght = 1;
+    b = succ(a, 0);
+    while(a != b){
+        b = succ(b, 0);
+        lenght++;
+    }
+    return lenght;
+}
