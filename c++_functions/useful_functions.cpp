@@ -191,6 +191,10 @@ bitset<110> maze[1010];
 string row; cin >> row;
 bitset<110> ax(row);
 maze[i] = ax;
+// left shift(<<) right shift op(>>)
+    // equivalent
+//or(|) -> sum(+) , Union(U)
+//and(&) -> intersection(), product(*), extracting bits
 	
 //Tuple
 tuple<type1, type2, ..., typeN> t;
