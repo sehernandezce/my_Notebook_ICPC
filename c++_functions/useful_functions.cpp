@@ -184,7 +184,8 @@ cout << bst[4] << "\n"; // 1
 cout << bst[5] << "\n"; // 0
 bst.count() // The function count returns the number of ones in the bitset
 bts.to_string() // A string
-bts.to_ullong()// To number long long
+bts.to_ullong()// To number unsigned long long
+bts.flip() // Flip of bits
 (bst & ~bst) //Soporta operator and(&) or(|) xor(^) not op(!)
 
 	
