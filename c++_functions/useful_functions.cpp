@@ -187,7 +187,10 @@ bts.to_string() // A string
 bts.to_ullong()// To number unsigned long long
 bts.flip() // Flip of bits
 (bst & ~bst) //Soporta operator and(&) or(|) xor(^) not op(!)
-
+bitset<110> maze[1010];
+string row; cin >> row;
+bitset<110> ax(row);
+maze[i] = ax;
 	
 //Tuple
 tuple<type1, type2, ..., typeN> t;
