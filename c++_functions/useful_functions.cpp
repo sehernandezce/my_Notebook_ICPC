@@ -178,7 +178,7 @@ deq.back()
 
 bitset<10> bst; //
 bst[3] = 1; //
-string snut; cin >> snut; reverse(all(snut)); bitset<20> nut(snut)
+string snut; cin >> snut; bitset<20> nut(snut)
 bitset<10> bst(string("0010011010")); // from right to left
 cout << bst[4] << "\n"; // 1
 cout << bst[5] << "\n"; // 0
