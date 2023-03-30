@@ -183,8 +183,11 @@ bitset<10> bst(string("0010011010")); // from right to left
 cout << bst[4] << "\n"; // 1
 cout << bst[5] << "\n"; // 0
 bst.count() // The function count returns the number of ones in the bitset
+bts.to_string() // A string
+bts.to_ullong()// To number long long
 (bst & ~bst) //Soporta operator and(&) or(|) xor(^) not op(!)
 
+	
 //Tuple
 tuple<type1, type2, ..., typeN> t;
 make_tuple(a, b, c, ..., d) //Returns a tuple with values written in the brackets.
