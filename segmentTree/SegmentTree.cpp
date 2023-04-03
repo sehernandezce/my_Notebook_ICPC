@@ -81,18 +81,18 @@ T segTree[8*N];
 T neutro = 0;
 
 T mrg(T d1, T d2){
-    return __gcd(d1,d2);
+    return d1+d2;
 }
 
-void update(int p, int l, int r, T val, int pos){
+void update(int p, int l, int r, T newVal, int pos){
     if(l == r){
-        segTree[p] = val;
+        segTree[p] = newVal;
         return;
     }
     int mid = l + ((r-l)>>1);
     int lef = (p << 1), rig = (p<<1) + 1;
-    if(mid < pos) update(rig,mid+1,r, val, pos);
-    else update(lef, l, mid, val, pos);
+    if(mid < pos) update(rig,mid+1,r, newVal, pos);
+    else update(lef, l, mid, newVal, pos);
     segTree[p] = mrg(segTree[lef], segTree[rig]);
     return;
 }
@@ -106,8 +106,8 @@ T query(int p, int l, int r, int i, int j){
     T vlef = query(lef, l, mid, i, j);
     T vrig = query(rig, mid+1, r, i, j);
     
-    if(dataL == neutro) return dataR;
-    if(dataR == neutro) return dataL;
+    if(vlef == neutro) return vrig;
+    if(vrig == neutro) return vlef;
 
     return mrg(vlef, vrig);
 }
