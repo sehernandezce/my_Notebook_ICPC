@@ -1,5 +1,5 @@
 //Algorithm or Logic: Binary indexed tree / Fenwick tree One Dimension
-//Complexity: O(log n) -> Range sum query or Updating a value
+//Complexity: O(log n) -> Range sum query or Updating a value sumandole x
 // Index 1 to n
 struct indexTree{ 
     int n = 0;
@@ -39,15 +39,17 @@ struct indexTree{
 //
 
 ///REVISAR!!
-int n;
-ll bit[200002];
-void update(int pos, ll val) {
-	for (; pos <= n; pos += pos & -pos) bit[pos] += val;
+ll bit[N];
+void update(int pos, ll newVal, int n){
+    for(; pos <= n; pos += pos & -pos) bit[pos]+=newVal;
 }
-
-ll query(int a, int b) {
-	ll ans = 0;
-	for (; b; b -= b & -b) ans += bit[b];
-	for (a--; a; a -= a & -a) ans -= bit[a];
-	return ans;
+ll query(int a, int b){
+    ll ans = 0;
+    for(;b; b-=b & -b) ans += bit[b];
+    for(a--; a; a-= a & -a) ans -= bit[a];
+    return ans;
 }
+/*
+query y update indexeados  1 a n 
+query las responde [a,b]
+*/
