@@ -113,3 +113,4 @@ T query(int p, int l, int r, int i, int j){
 }
 // update(1,0,n-1, newV, posV)
 // query(1,0,n-1, i, j) 
+// i,j, posV indexadas de 0 a n-1
