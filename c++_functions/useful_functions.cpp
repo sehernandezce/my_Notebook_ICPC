@@ -157,6 +157,9 @@ priority_queue<ll> que;
 priority_queue<int,vector<int>,greater<int>> que(data.begin(), data.end()); // priority_queue<int, vector<int>, decltype(cmp)> 
 // If we want to create a priority queue that supports finding and removing the smallest element
 queue <ll> que;
+pending.push(begin);
+pending.front();
+pending.pop();
 
 //DEQUE
 deque<int> d;
