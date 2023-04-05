@@ -4,6 +4,42 @@ TRIE
 REVISAR!
 */
 
+int trie[N][26];
+bool finish[N];
+int cnt[N];
+int node = 1;
+
+void add(string& s, int val){
+    int cur = 0;
+    for(char c: s){
+        int v = c - 'a';
+        if(trie[cur][v] == 0){ // Si no existe la conexion
+            trie[cur][v] = nodes;
+            nodes++;
+        }
+        cur = trie[cur][v];
+        cnt[cur] += val;
+    }
+    if(val == 1) end[cur] = 1;
+    else end[cur] = 0;
+}
+
+bool find(string& s, int val){ 
+    int cur = 0;
+    for(char c: s){
+        int v = c - 'a';
+        if(trie[cur][v] == 0){ // Si no existe la conexion
+            return false;
+        }
+        cur = trie[cur][v];
+        if(cnt[cur] == 0) return false;
+    }
+    if(end[cur]) return true;
+    else return false;
+}
+
+
+/// Con struct
 #include <bits/stdc++.h>
 
 #define IO ios_base::sync_with_stdio(false), cin.tie(nullptr)
