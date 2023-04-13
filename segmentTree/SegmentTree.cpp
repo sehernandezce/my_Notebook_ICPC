@@ -117,12 +117,12 @@ void print(int p, int l, int r, int i, int j){
     if(l > j  || r < i) return;
     int mid = l + ((r-l)>>1);
     int lef = (p << 1), rig = (p<<1) + 1;
-    cout << "l: " << l << " r: " << r << " seg: " << segTreeLazy[p] << " lazy:  " << lazy[p] << endl;
+    cout << "l: " << l << " r: " << r << " seg: " << segTree[p] << endl;
     
     if(l == r) return;
     print(lef, l, mid, i, min(j,mid));
     print(rig, mid+1, r, max(i,mid+1), j);
-} //print(1, 0, n-1, 0, n-1);
+}//print(1, 0, n-1, 0, n-1);
 // update(1,0,n-1, newV, posV)
 // query(1,0,n-1, i, j) 
 // i,j, posV indexadas de 0 a n-1
