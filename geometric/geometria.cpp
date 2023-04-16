@@ -1,6 +1,7 @@
 // Algorithm or logic: Geometry general 2D 
 //
 typedef long long T;
+const lf pi = 3.14159265358979323846;
 struct pt{
     T x,y;
     pt operator - (const pt &o) const { return {x - o.x, y - o.y}; }
@@ -68,6 +69,15 @@ vector<pt> convex_hull(vector<pt>& p){
     // Tener cuidado con casos n < 3
     if((int)ch.size() == 2 && ch[0] == ch[1]) ch.pop_back();
     return ch;
+}
+
+T norm(pt a){return a.x*a.x + a.y*a.y;}
+
+lf abs(pt a){return sqrt((lf)norm(a));}
+
+lf angle(pt a, pt b){
+    lf ad = abs(a), op = abs(b);
+    return atan(op/ad)*(180.0/pi);
 }
 
 //
