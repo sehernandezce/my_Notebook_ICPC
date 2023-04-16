@@ -39,3 +39,28 @@ void bs2(ll n, ll x){
         // x found at index K
     }
 }
+
+///
+lf pote(lf mid, int k){
+    lf ans = 1.0;
+    while(k--){
+        ans*=mid;
+    }
+    return ans;
+}
+
+lf sqrtBinary(lf x, int k){
+    lf lo = 0.0, hi = x+1.0, err = 1e-7;
+    lf ans = 0.0;
+    while(abs(hi - lo) > err){
+        lf mid = lo + ((hi - lo)/2.0);
+        // cout << precise(mid,8) << " " << precise(hi,8) << " " << precise(lo,8) << endl;
+        if(pote(mid,k) >= x){
+            hi = mid;
+            ans = mid;
+        }else{
+            lo = mid;
+        }
+    }
+    return ans;
+}
