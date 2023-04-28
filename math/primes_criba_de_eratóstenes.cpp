@@ -21,21 +21,17 @@ void prim(ll n){ // primes with n >= 2
     }
 }
 
-
-int sieve[MAXN];
-void criba(int N){
-    for(int i = 2; i <= N; i++){
-        if(sieve[i]) continue;
-        for(int j = i; j <= N; j+=i){
-            sieve[j] = i;
-        }
+const int N = 9e7 + 5;
+ll prime[5000005]; // Calcula 5*10^5 primos
+vector<bool> isprime(N, false);
+void criba(int n){
+    int k = 0;
+    for(int i = 2; i <=n; i++){
+        if(isprime[i]) continue;
+        prime[k] = i;
+        k++;
+        if(k > 5000000) break;
+        for(int j = i; j <= n; j+=i) isprime[j] = true;
     }
 }
-
-/*
-    ll n;
-    cin >> n;
-    prim(n);
-    for(auto ele: prime) cout << ele << " ";
-    cout << endl;
-*/
+//int n = 90000000;
