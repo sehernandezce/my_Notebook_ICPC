@@ -25,7 +25,65 @@ struct UnionFind{
         //mxSize = max(mxSize,numSon[findSet(j)]);
     }
 };
- 
+
+// Union find Rapido de codear PROBADO
+ll link[N], sz[N];
+map<pair<ll,ll>, ll> mp;
+
+ll find(ll x){
+    while(x != link[x])  x = link[x];
+    return x; // link[x] = x; // Para la optimización
+}
+
+bool same(ll a, ll b){
+    return find(a) == find(b);
+}
+
+void unite(ll a, ll b, ll w){
+    a = find(a);
+    b = find(b);
+    if(a == b) return;
+    
+    if(sz[a] < sz[b]) swap(a,b);
+    sz[a] += sz[b];
+    link[b] = a;
+    mp[make_pair(b,a)] = w;
+    return;
+}
+// for(ll i = 1; i<N; i++) link[i] = i;
+// for(ll i = 1; i<N; i++) sz[i] = 1;
+
+// Busca el primer padre en comun
+ll find2(ll x, ll y){
+
+    set<pair<ll,ll>> stx;
+    stx.insert(make_pair(x, 0));
+    while(x != link[x]){
+        auto w = mp[make_pair(x,link[x])];
+        stx.insert(make_pair(link[x], w));
+        x = link[x];
+    }
+
+    ll ww = 0;
+    auto low = stx.lower_bound(make_pair(y, 0));
+    if(low != stx.end()){
+        auto [node, wx] = *low;
+        if(node == y && wx != 0) ww = max(wx, 0LL); 
+    }
+    while(y != link[y]){
+        auto w = mp[make_pair(y,link[y])];
+        low = stx.lower_bound(make_pair(link[y], 0));
+        if(low != stx.end()){
+            auto [node, wx] = *low;
+            if(node == link[y] && wx != w) ww = max(wx, w); 
+        }
+        y = link[y];
+    }
+    
+    if(x != y) return oo;
+
+    return ww;
+}
 
 // Union find Oman
 int f[N], len[N];
