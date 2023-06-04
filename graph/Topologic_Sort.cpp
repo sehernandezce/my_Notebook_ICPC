@@ -1,4 +1,4 @@
-//Algorithm or logic: Topologic Sort Revisar!
+//Algorithm or logic: Topologic Sort Algoritmo de kahn
 //Complexity: 
 vector<int> topSort(vector<vector<int>>& g, vector<int>& inGrade) {
     int n = (int)inGrade.size();
