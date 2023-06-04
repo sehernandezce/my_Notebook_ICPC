@@ -20,3 +20,35 @@ vector<int> topSort(vector<vector<int>>& g, vector<int>& inGrade) {
 /*
 adj[i].push_back(k); inGrade[k]++;
 */
+
+// Todos los ordenes topologicos
+void findAllTopoOrders(vector<vector<int>>& g, vector<int>& inGrade ,vector<int>& path, vector<bool>& discovered, int n){
+    for(int v = 0; v < n; v++){
+        if(inGrade[v] == 0 && !discovered[v]){
+            for(auto u: g[v]){
+                inGrade[u]--;
+            }
+            path.push_back(v);
+            discovered[v] = true;
+
+            findAllTopoOrders(g, inGrade, path, discovered, n);
+            for(auto u: g[v]){
+                inGrade[u]++;
+            }
+
+            path.pop_back();
+            discovered[v] = false;
+        }
+    }
+
+    if(path.size() == n){
+        // Nuevo orden topologico
+    }
+}
+
+void goAllTopoOrders(vector<vector<int>>& g, vector<int>& inGrade, int n){
+    vector<bool> discovered(n);
+
+    vector<int> path;
+    findAllTopoOrders(g, inGrade, path, discovered, n);
+}
