@@ -6,20 +6,40 @@ Link:
 More info: 
 */
 
-#include <bits/stdc++.h>
-
-#define IO ios_base::sync_with_stdio(false), cin.tie(nullptr);
-#define endl '\n'
-
+//Autor: 
+#include<bits/stdc++.h>
 using namespace std;
 
+#define precise(ans,k) fixed << setprecision(k) << ans //k digit
+#define MAX LLONG_MAX // INT_MAX
+#define MIN LLONG_MIN // INT_MIN
+
+typedef long long ll;
+typedef double lf;
+
+const int N = 2e5 + 5;
+const lf PI = 3.141592653589793;
+const ll MOD = 1e9 + 7;
+
 int main(){
+    #ifdef LOCALNZN
+    //    freopen("input.txt", "r", stdin); 
+    //    freopen("output.txt", "w", stdout);  
+    #else
+        #define endl '\n'
+    #endif
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 
 
-	return 0;
+    
+    return 0;
 }
 
-//By Seishi
+///
+//Windows: g++ -DLOCALNZN -std=c++20 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "%opcion%" "%opcion%.cpp" && %opcion%
+//Linux: g++ -DLOCALNZN -std=c++20 -g -O2 -Wconversion -Wshadow -Wall -Wextra -D_GLIBCXX_DEBUG -o "$opcion" "$opcion.cpp" && ./$opcion
+///
 
 
 
