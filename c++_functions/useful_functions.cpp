@@ -116,6 +116,11 @@ mp.count("Key") //The function count checks if a key exists in a map
 unordered_map <ll, ll> ump; // Cannot declare a pair as a key
 ump.find(s) != ump.end() // to know if the key exists 
 
+//LIST (Double linked list)
+list <data-type> name_of_list;
+list<int> gqlist{12,45,8,6};
+gqlist1.push_back(i * 2);
+
 //VECTOR
 	//https://codeforces.com/blog/entry/74684
 vector<ll> vec;
