@@ -27,3 +27,4 @@ int get_matches(string &t, string &p) {
 }
 
 ///
+// Para optimizar se podria leer caracter por caracter 
