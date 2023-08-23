@@ -11,6 +11,11 @@ void dfs(int u, int bef){
     } 
 }
 
+// u -> v // In tree ancestor
+bool isAns(int u, int v){ 
+    return in[u] <= in[v] && out[u] >= out[v];
+}
+
 //Count nodes of Subtree
 int cnt[N];
 void dfs2(int u, int bef){
