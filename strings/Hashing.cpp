@@ -4,6 +4,13 @@
 //
 const int MAXN = 200020;
 typedef pair<int, int> mint;
+
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll random(ll a, ll b) {return uniform_int_distribution<ll> (a,b) (rng);}
+// const int listMODS[] = {1001864327, 1001265673, 1000234999, 1000567999, 1000111997, 1000777121};
+// const int MODS[] = {listMODS[random(0,5)], listMODS[random(0,5)]};
+// const mint BASE(random(256,1000000007), random(256,1000000007)), ZERO(0, 0), ONE(1, 1);
+
 /// 1000234999, 1000567999, 1000111997, 1000777121
 const int MODS[] = { 1001864327, 1001265673 };
 const mint BASE(256, 256), ZERO(0, 0), ONE(1, 1);
@@ -45,9 +52,10 @@ struct hs {
 // or
 /*
     prepare();
-    string s; cin >> s; // kkholapop
+    string s,s2; cin >> s >> s2; // kkholapop hola
     hs<string> myHs (s);
+    hs<string> myHs2 (s2);
     cout << myHs.query(0, len(s)-1) << endl;
-    mint pp = {750268378, 750867032}; // hola
-    cout << (myHs.query(2, 5) == pp) << endl;
+    cout << myHs2.query(0, len(s2)-1) << endl;
+    cout << (myHs.query(2, 5) == myHs2.query(0,len(s2)-1)) << endl;
 */
