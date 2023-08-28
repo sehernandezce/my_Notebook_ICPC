@@ -203,7 +203,19 @@ maze[i] = ax;
     // equivalent
 //or(|) -> sum(+) , Union(U)
 //and(&) -> intersection(), product(*), extracting bits
-	
+//Cuenta zeros a la izquierda 
+int => __builtin_clz(x)
+long => __builtin_clzl(x)
+long long => __builtin_clzll(x)
+
+//De igual forma cuenta los zeros a la derecha hasta el primer 1
+ __builtin_ctz(x)
+
+//Cuenta el numero de unos
+__builtin_popcount(x)
+long long => __builtin_popcountll(x)
+
+
 //Tuple
 tuple<type1, type2, ..., typeN> t;
 make_tuple(a, b, c, ..., d) //Returns a tuple with values written in the brackets.
