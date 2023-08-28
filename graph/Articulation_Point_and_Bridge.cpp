@@ -31,5 +31,6 @@ void artiANDbridge(ll u){
             articulation_vertex[dfsRoot] = (rootChildren > 1);
         }
     }
+    //Tener cuidado con las mismas  aristas repetidas en los bridge
    
 */
