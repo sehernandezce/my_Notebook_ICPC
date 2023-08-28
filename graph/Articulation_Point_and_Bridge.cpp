@@ -27,6 +27,7 @@ void artiANDbridge(ll u){
     for(int i = 1; i<=n; i++){
         if(dfs_num[i] == 0){
             dfsRoot = i; rootChildren = 0; 
+            artiANDbridge(i);
             articulation_vertex[dfsRoot] = (rootChildren > 1);
         }
     }
