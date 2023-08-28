@@ -48,6 +48,12 @@ void kosaraju(int n){
             if(idc[i] != idc[j]) nwadj[dic[i]].pb(idc[j]);
         }
     }
+
+    // Nos sirve para evitar aristas repetidas
+    for(int i = 1; i <= numSCC; i++){
+        sort(all(nwadj[i]));
+        nwadj[i].resize(unique(all(nwadj[i])) - nwadj[i].begin());
+    }
 }
 
 // adjOri[u].pb(v);
