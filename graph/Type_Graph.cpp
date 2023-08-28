@@ -36,3 +36,26 @@ void graph(ll n){ // n node , m edges
     graphedg[i].push_back(edges.size()-1);
     graphedg[j].push_back(edges.size()-1);
 }
+
+////////////////////**********************
+// Ejemplo de compresion de coordenadas 
+    vector<ll> nodes;
+    vector<pair<ll, ll>> edges;
+
+    for(int i = 0; i < m; ++i){
+        ll u,v; cin >> u >> v;
+        nodes.pb(u);
+        nodes.pb(v);
+        edges.emplace_back(u,v);
+    }
+    sort(node.begin(), nodes.end());
+    nodes.resize(unique(nodes.begin(), nodes.end()) - nodes.begin());
+
+    vector<vector<int>> nwadj(nodes.size());
+    for(auto& e: edges){
+        int u = lower_bound(nodes.begin(), nodes.end(), e.first) - nodes.begin();
+        int v = lower_bound(nodes.begin(), nodes.end(), e.second) - nodes.begin();
+        nwadj[u].pb(v); // u -> v
+    }
+
+
