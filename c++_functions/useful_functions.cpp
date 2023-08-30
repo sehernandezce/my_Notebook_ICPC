@@ -185,6 +185,7 @@ deq.back()
 	-> A bitset is an array whose each value is either 0 or 1.
 	-> bitset only requires n bits of memory // Puede consumir más memoria en comparación con long long, ya que cada bit se almacena como un booleano
 	-> Can to use bit operations: | & ^ >> <<
+	-> More o less 10**8 len max
 
 bitset<10> bst; //
 bst[3] = 1; //
@@ -192,7 +193,7 @@ string snut; cin >> snut; bitset<20> nut(snut)
 bitset<10> bst(string("0010011010")); // from right to left
 cout << bst[4] << "\n"; // 1
 cout << bst[5] << "\n"; // 0
-bst.count() // The function count returns the number of ones in the bitset
+bst.count() // The function count returns the number of ones in the bitset // O(1)
 bts.to_string() // A string
 bts.to_ullong()// To number unsigned long long
 bts.flip() // Flip of bits
