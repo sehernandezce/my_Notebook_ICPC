@@ -11,6 +11,20 @@ void dfs(int u, int bef){
     } 
 }
 
+/// Tree SubTree Queries
+int tin[N], tout[N], lenSubT[N];
+int t = 0;
+void dfs(int u, int p){
+    tin[u] = t++;
+    lenSubT[u] = 1;
+    for(auto& v: adj[u]){
+        if(v == p) continue;
+        dfs(v, u);
+        lenSubT[u] += lenSubT[v];
+    }
+    tout[u] = t-1;
+}
+
 // u -> v // In tree ancestor
 bool isAns(int u, int v){ 
     return in[u] <= in[v] && out[u] >= out[v];
