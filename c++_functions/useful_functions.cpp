@@ -27,8 +27,10 @@ Evitar el uso de double o funciones que retornen este tipo de dato
 NO usar .count para saber si existe en un multiset !!!!!
 Para corregir el error de presicion de una sqrt x = sqrt(n)-5; While (x*x<n) ++x;
 
-
 */
+
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
 //
 ll arr[n];
