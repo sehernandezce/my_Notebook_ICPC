@@ -59,3 +59,18 @@ struct hs {
     cout << myHs2.query(0, len(s2)-1) << endl;
     cout << (myHs.query(2, 5) == myHs2.query(0,len(s2)-1)) << endl;
 */
+////
+void hash(){
+    int base = 256;
+    int hash = 0;
+    int p = 1e9+7;
+    vector<int> acc(s.size(), BASE(s.size()));
+    BASE[0]= 1;
+    for(int i = 0; i < s.size(); i++){
+        hash = (1LL * hash * base + s[i]) % p;
+        acc[i] = hash;
+        if(i > 0) BASE[i] = BASE[i-1] * base;
+    }
+    int l, r; // [l,r]
+    cout << ((acc[r+1] - acc[l]*BASE[r-l+1]%p + p)%p) << endl;
+}
