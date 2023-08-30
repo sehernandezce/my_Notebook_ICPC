@@ -181,8 +181,8 @@ deq.back()
 
 //BISET
 	-> A bitset is an array whose each value is either 0 or 1.
-	-> bitset only requires n bits of memory
-	-> Can to use bit operations: | & ^
+	-> bitset only requires n bits of memory // Puede consumir más memoria en comparación con long long, ya que cada bit se almacena como un booleano
+	-> Can to use bit operations: | & ^ >> <<
 
 bitset<10> bst; //
 bst[3] = 1; //
