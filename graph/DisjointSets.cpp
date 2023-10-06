@@ -100,6 +100,9 @@ void merge(int a, int b){
     f[a]=b;
     return;
 }
+/*
+for(int i = 1; i <= n; i++) {f[i] = i; len[i] = 1;}
+*/
 
 // Union find Oman, add, size, undo
 int f[N], len[N];
