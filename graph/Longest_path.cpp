@@ -44,3 +44,14 @@ void dfsLP(int u){
     }
     //cout << " -NODE- " << u << endl;
 }
+
+
+// Longest Path in Directed Graph
+for(int i = 0; i < (int)topSort.size(); i++)    
+{   
+    int u = topSort[i];
+    for(auto& v: G[u])
+    {
+        if(cost[v] < cost[u]+1) cost[v] = cost[u]+1;
+    }
+}
