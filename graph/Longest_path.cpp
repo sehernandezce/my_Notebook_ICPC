@@ -51,7 +51,8 @@ for(int i = 0; i < (int)topSort.size(); i++)
 {   
     int u = topSort[i];
     for(auto& v: G[u])
-    {
-        if(cost[v] < cost[u]+1) cost[v] = cost[u]+1;
+    {    
+        int w = 1;//edge[make_pair(min(u,v),max(u,v))];
+        if(cost[v] < cost[u]+w) cost[v] = cost[u]+w;
     }
 }
