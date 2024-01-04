@@ -106,6 +106,9 @@ orset.find_by_order(); ///   auto ans = ost.find_by_order(k-1); //  cout << -(*a
 //Busca por elemento
 orset.order_of_key(); // ost.order_of_key(14);
 
+order_of_key: The number of items in a set that are strictly smaller than k
+find_by_order: It returns an iterator to the ith largest element
+
 //MAP
 	-> Internally, the elements in a map are always sorted by its key
 	-> map is based on a balanced binary search tree and accessing elements takes O(log n) time.
