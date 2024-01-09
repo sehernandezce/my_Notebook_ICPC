@@ -337,3 +337,5 @@ assert(x == 1); // Finaliza el programa si la expresion retorna 0
 cout << fixed << setprecision(6) << ans << endl;
 auto [h,w] = vc[i];
 set<char>(s.begin(), s.end())
+
+#define precise(ans,k) fixed << setprecision(k) << ans //k digit
