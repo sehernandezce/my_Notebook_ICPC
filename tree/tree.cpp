@@ -65,3 +65,31 @@ int ans = x;
         }
         if(ans == 0) ans = -1;
 */
+
+
+typedef long long ll;
+mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
+ll random(ll a, ll b) {return uniform_int_distribution<ll> (a,b) (rng);}
+
+map<ll, ll> memoG;
+ll vis[200005];
+vector<ll> adj[200005];
+
+ll g(ll x)
+{   
+    if(memoG.count(x) == 1) memoG[x];
+    return memoG[x] = random(1, (1LL << 62));
+}
+
+ll dfs(ll u)
+{
+    vis[u] = 1;
+    ll tot = 0;
+    for(auto& v: adj[u])
+    {
+        if(vis[v]) continue;
+        tot+= dfs(v);
+    }
+    ll fx = g(tot);
+    return fx;
+}
