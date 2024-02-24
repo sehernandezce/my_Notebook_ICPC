@@ -25,7 +25,7 @@ Al asignar tamaño a un arreglo usar una variable constante.
 Long double es distinto a double 
 Evitar el uso de double o funciones que retornen este tipo de dato
 NO usar .count para saber si existe en un multiset !!!!!
-Para corregir el error de presicion de una sqrt x = sqrt(n)-5; While (x*x<n) ++x;
+Para corregir el error de presicion de una sqrt ll rx = (x >= 36 ? sqrt(x)-5: 1); while (rx*rx<x) ++rx;
 
 */
 
