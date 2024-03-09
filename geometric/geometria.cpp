@@ -80,6 +80,16 @@ lf angle(pt a, pt b){
     return atan(op/ad)*(180.0/pi);
 }
 
+lf angle2(pt c1, pt c2, pt c3)
+{   
+    pt a = c2 - c1;
+    pt b = c3 - c1;
+    T dt = dot(a,b);
+    lf ma = abs(a), mb = abs(b);
+    lf theta = dt/(ma*mb);
+    return acos(theta)*(180.0/pi);
+}
+
 //
 /*
 pt a {1, 2};
