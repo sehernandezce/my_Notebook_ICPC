@@ -26,6 +26,7 @@ Long double es distinto a double
 Evitar el uso de double o funciones que retornen este tipo de dato
 NO usar .count para saber si existe en un multiset !!!!!
 Para corregir el error de presicion de una sqrt ll rx = (x >= 36 ? sqrt(x)-5: 1); while (rx*rx<x) ++rx;
+Operar siempre con todos los decimales de double no acotar
 */
 
 #pragma GCC optimize("O3,unroll-loops")
