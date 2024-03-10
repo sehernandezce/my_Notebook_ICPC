@@ -16,7 +16,7 @@ T dot(pt a, pt  b){
     return a.x * b.x + a.y * b.y;
 }
 
-T cross(pt a, pt b){
+T cross(pt a, pt b){  // si cross(a,b) == 0 Son vectores paralelos
     return a.x*b.y - a.y*b.x;
 }
 
