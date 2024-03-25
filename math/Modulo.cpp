@@ -16,13 +16,13 @@ struct mod{
 };
 
 
-inline ll mul(ll a, ll b, const ll& mod) { return 1ll*a*b%mod; }
-inline ll add(ll a, ll b, const ll& mod)  // + or - 
-{   
-    if(a+b >= 0) return (a+b)%mod;
-    else
+// MOD
+inline ll mod(ll a, const ll& mod) 
+{
+    if(a>=0) return a%mod;
+    else 
     {
-        ll k = (abs(a+b)+mod-1)/mod;
-        return (a+b+(mod*k))%mod;
+        ll k = (abs(a)+mod-1)/mod;
+        return (a+(mod*k))%mod;
     }
 }
