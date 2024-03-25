@@ -14,3 +14,15 @@ struct mod{
     mod operator !() const {return *this ^(MOD - 2);}
     mod operator / (const mod &b) const {return *this * !b;};
 };
+
+
+inline ll mul(ll a, ll b, const ll& mod) { return 1ll*a*b%mod; }
+inline ll add(ll a, ll b, const ll& mod)  // + or - 
+{   
+    if(a+b >= 0) return (a+b)%mod;
+    else
+    {
+        ll k = (abs(a+b)+mod-1)/mod;
+        return (a+b+(mod*k))%mod;
+    }
+}
