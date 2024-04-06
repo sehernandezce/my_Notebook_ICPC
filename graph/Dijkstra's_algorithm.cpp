@@ -6,6 +6,7 @@ const ll MAXN=1e17+10;
 const ll oo=1e17+10; // ll oo = LLONG_MAX;
 vector <pair<ll,ll>> graph[MAXN]; //graph[ax].PB({bx,w}) 
 
+// FALSE !! NO USE
 vector <ll> dijkstra (ll begin, ll n){ 
 
     priority_queue<pair<ll,ll>> pending; // (−d, x) the current distance to node x is d
@@ -33,6 +34,7 @@ vector <ll> dijkstra (ll begin, ll n){
 return distance;
 }
 
+// THIS IS GOD!!
 vector<ll> dist(MAXN,oo);
 void dijkstra(int p){
     priority_queue<pair<ll,int>, vector<pair<ll,int>>, greater<pair<ll,int>>> pending;
