@@ -193,3 +193,52 @@ En los problemas que se busca el valor y el peso es muy grande. Buscar la dp  qu
 //5) Coin-Change (CC) - The General Version
 //Algorithm or Logic: 
 //Complexity: O(nV)
+int dp(int type, int value) {
+    if (value == 0) return 1; // one way, use nothing
+    if ((value < 0) || (type == N)) return 0; // invalid or done
+    int &ans = memo[type][value];
+    if (ans != -1) return ans; // was computed before
+    return ans = dp(type+1, value) + // ignore this type
+    dp(type, value-coinValue[type]); // one more of this type
+}
+
+//6) Traveling-Salesman-Problem (TSP)
+//Algorithm or Logic: Halmiton's Path
+//Complexity: O((n^2)*2^(n-1))
+int dist[21][21];
+int n;
+
+ll memo[21][(1<<(19))];
+ll dp(int u, int mask)
+{
+    // if(mask == 0) return g[u][n-1];
+    if(mask == 0) return dist[u][0];
+    ll &r = memo[u][mask];
+    if(r != -1) return r;
+    // r = 0;
+    r = oo;
+    int m = mask;
+    while(m > 0)
+    {
+        int two_pow_v = LSOne(m);
+        int v = __builtin_ctz(two_pow_v)+1;
+        m -= two_pow_v;
+        r = min(r, dist[u][v] + dp(v, mask^two_pow_v));
+        // if(g[u][v] > 0)
+        // {
+        //     r+=(dp(v, mask^two_pow_v)*g[u][v])%MOD;
+        //     r%= MOD;
+        // }
+    }
+    return r;
+}
+/*
+Given n cities  and their pairwise distances in the form of a symmetric
+matrix dist of size n ⇥ n, compute the minimum cost of making a tour44 that starts from
+any city s, goes through all the other n  1 cities exactly once, and finally returns to the
+starting city s
+
+Tour: Such a tour is called a Hamiltonian tour, which is a cycle in an undirected graph which visits each vertex
+exactly once and also returns to the starting vertex. Later in Book 2, we will learn that TSP is an NP-hard
+optimization problem
+*/
