@@ -26,3 +26,12 @@ inline ll mod(ll a, const ll& mod)
         return (a+(mod*k))%mod;
     }
 }
+
+
+ll phiEuler(ll n){
+    ll ans = 0;
+    for(ll i = 1; i<n; i++){
+        if(__gcd(n,i) == 1) ans++;
+    }
+    return ans;
+}
