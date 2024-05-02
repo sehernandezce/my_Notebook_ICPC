@@ -35,3 +35,12 @@ void criba(int n){
     }
 }
 //int n = 90000000;
+
+
+void criba(int n){
+    for(int i = 2; i <= n; i++){
+        if(isprime[i]) continue;
+        prime.push_back(i);
+        for(int j = i; j <= n; j+=i) isprime[j] = (ll)i;
+    }
+}
