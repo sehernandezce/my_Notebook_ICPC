@@ -46,16 +46,25 @@ void criba(int n){
 
 
 // Descomposicion prima
- vector<ll> factors, ex;
-    ll id = 0, p = prime[id];
-    while(p*p <= n){
-        if(n%p == 0) factors.push_back(p);
-        ll power = 0;
-        while(n%p == 0){
-            n/= p;
-            power++;
-        }
-        if(power) ex.push_back(power);
-        p = prime[id++];
+vector<ll> factors, ex;
+ll id = 0, p = prime[id];
+while(p*p <= n){
+    if(n%p == 0) factors.push_back(p);
+    ll power = 0;
+    while(n%p == 0){
+        n/= p;
+        power++;
     }
-    if(n!= 1) {factors.push_back(n); ex.push_back(1);}
+    if(power) ex.push_back(power);
+    p = prime[id++];
+}
+if(n!= 1) {factors.push_back(n); ex.push_back(1);}
+
+
+ll phiEuler(ll n){
+    ll ans = 0;
+    for(ll i = 1; i<n; i++){
+        if(__gcd(n,i) == 1) ans++;
+    }
+    return ans; // const ll phi = ans - 1;
+} 
