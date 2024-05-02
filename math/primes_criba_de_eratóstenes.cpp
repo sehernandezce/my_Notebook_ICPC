@@ -36,7 +36,6 @@ void criba(int n){
 }
 //int n = 90000000;
 
-
 void criba(int n){
     for(int i = 2; i <= n; i++){
         if(isprime[i]) continue;
@@ -44,3 +43,19 @@ void criba(int n){
         for(int j = i; j <= n; j+=i) isprime[j] = (ll)i;
     }
 }
+
+
+// Descomposicion prima
+ vector<ll> factors, ex;
+    ll id = 0, p = prime[id];
+    while(p*p <= n){
+        if(n%p == 0) factors.push_back(p);
+        ll power = 0;
+        while(n%p == 0){
+            n/= p;
+            power++;
+        }
+        if(power) ex.push_back(power);
+        p = prime[id++];
+    }
+    if(n!= 1) {factors.push_back(n); ex.push_back(1);}
