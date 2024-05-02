@@ -33,5 +33,5 @@ ll phiEuler(ll n){
     for(ll i = 1; i<n; i++){
         if(__gcd(n,i) == 1) ans++;
     }
-    return ans;
-}
+    return ans; // const ll phi = ans - 1;
+} 
