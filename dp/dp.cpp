@@ -205,6 +205,8 @@ int dp(int type, int value) {
 //6) Traveling-Salesman-Problem (TSP)
 //Algorithm or Logic: Halmiton's Path
 //Complexity: O((n^2)*2^(n-1))
+#define LSOne(x) ((x) & -(x)) //To get the value of the least significant bit of S that is on (first from the right)
+
 int dist[21][21];
 int n;
 
@@ -241,4 +243,52 @@ starting city s
 Tour: Such a tour is called a Hamiltonian tour, which is a cycle in an undirected graph which visits each vertex
 exactly once and also returns to the starting vertex. Later in Book 2, we will learn that TSP is an NP-hard
 optimization problem
+*/
+
+//7) UVa 10943 - How do you add? (Combinatory)
+//Algorithm or Logic: 
+//Complexity: O((n^2)*k)
+
+ll dp(int a, int c)
+{
+    if(c == 1) return 1;
+    ll &r = memo[a][c];
+    if(r!=-1) return r;
+    r = 0;
+    for(int x = 0; x <= n; x++) 
+    {
+        if(a-x >= 0)
+        {
+            r += dp(a-x, c-1);
+            r%=MOD;
+        }
+    }
+    return r;
+}
+
+//8) UVa 10003 - Cutting Sticks (Cutting)
+//Algorithm or Logic: 
+//Complexity: O((n^3))
+
+int cut[110];
+ll memo[110][110];
+
+ll dp(int lef, int rig)
+{
+    if(lef+1 == rig) return 0;
+    ll &r = memo[lef][rig];
+    if(r != -1) return r;
+    r = oo;
+    for(int i = lef+1; i < rig; i++)
+    {
+        r = min(r, dp(lef, i) + dp(i,rig) + (cut[rig] - cut[lef]));
+    }
+    return r;
+}
+
+/*
+cut[0] = 0;
+for(int i = 1; i <= n; i++) cin >> cut[i];
+cut[n+1] = l;
+ll ans = dp(0, n+1);
 */
