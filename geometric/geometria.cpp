@@ -94,3 +94,27 @@ lf angle2(pt c1, pt c2, pt c3)
 /*
 pt a {1, 2};
 */
+
+// Area de un triangualo dado tres puntos
+// Función para calcular la distancia entre dos puntos
+double distancia(double x1, double y1, double x2, double y2) {
+    return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
+}
+
+// Función para calcular el área de un triángulo dado tres puntos
+double areaT2(pair<lf,lf> aa, pair<lf,lf> bb, pair<lf,lf> cc) {
+    auto[x1,y1] = aa;
+    auto[x2,y2] = bb;
+    auto[x3,y3] = cc;
+
+    // Calcular las longitudes de los lados del triángulo
+    double a = distancia(x1, y1, x2, y2);
+    double b = distancia(x2, y2, x3, y3);
+    double c = distancia(x3, y3, x1, y1);
+
+    // Calcular el semiperímetro
+    double s = (a + b + c) / 2.0;
+
+    // Aplicar la fórmula de Néron para calcular el área
+    return sqrt(s * (s - a) * (s - b) * (s - c));
+}
