@@ -32,6 +32,9 @@ Operar siempre con todos los decimales de double no acotar
 #pragma GCC optimize("O3,unroll-loops")
 #pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
 
+#pragma GCC optimize("Ofast")
+// #pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx,avx,tune=native")
+
 //
 ll arr[n];
 vector<ll> vec;
