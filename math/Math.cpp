@@ -162,3 +162,9 @@ ll bs (ll x, ll err, ll k){
     }
     return l + ((r-l)/2);
 }
+
+// Raiz cuadrada
+x, y = 1, m
+while(abs(x-y) > 0.001):
+    x = (x+y) // 2
+    y = m // x
