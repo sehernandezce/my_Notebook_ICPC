@@ -52,3 +52,31 @@ void goAllTopoOrders(vector<vector<int>>& g, vector<int>& inGrade, int n){
     vector<int> path;
     findAllTopoOrders(g, inGrade, path, discovered, n);
 }
+
+
+// Con dfs
+
+int vis[N];
+vector<int> ans;
+
+bool dfs(int u)
+{   
+    if(vis[u] == 1) return 0;
+
+    vis[u] = 2;
+    int r = 0;
+    for(auto v: adj[u])
+    {
+        if(vis[v] == 0) r |= dfs(v);
+        else if(vis[v] == 2) r = 1;
+    }
+    ans.push_back(u);
+    vis[u] = 1;
+    return r;
+}
+
+    bool chk = 0; // Si es 1 no existe orden topologico
+    for(int i = 1; i <= n; i++)
+    {
+        chk |= dfs(i);
+    }
