@@ -168,3 +168,19 @@ x, y = 1, m
 while(abs(x-y) > 0.001):
     x = (x+y) // 2
     y = m // x
+
+
+// Factorial 
+ll fac[1001], inv[1001], facInv[1001];
+
+void cal(int n){
+    fac[0] = fac[1] = 1;
+    inv[1] = 1;
+    facInv[0] = facInv[1] = 1;
+
+    for(ll i = 2;  i< n; i++){
+        fac[i] = (fac[i-1]*i)%MOD;
+        inv[i] = MOD - (ll)(MOD/i) * inv[(ll)(MOD%i)]%MOD;
+        facInv[i] = (facInv[i-1]*inv[i])%MOD;
+    }
+}
