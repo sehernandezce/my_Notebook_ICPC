@@ -294,11 +294,55 @@ cut[n+1] = l;
 ll ans = dp(0, n+1);
 */
 
+//9) Knuth's Optimization - UVa 10003 - Cutting Sticks (Cutting)
+//Algorithm or Logic: Range Dp with Knuth's Optimization
+//Complexity: 
+// optimize the time complexity O(n^3) => O(n^2)
+// https://cp-algorithms.com/dynamic_programming/knuth-optimization.html
+
+int l, n, A[55], memo[55][55];
+int opt[55][55];
+
+int cut(int left, int right) {
+  if (left+1 >= right) {
+    opt[left][right] = right;
+    return 0;
+  }
+  int &ans = memo[left][right];
+  if (ans != -1) return ans;
+  ans = 2e9;
+  cut(left,right-1);
+  cut(left+1,right);
+  for (int i = opt[left][right-1]; i <= opt[left+1][right]; ++i) {
+    int value = cut(left, i) + cut(i, right) + (A[right]-A[left]);
+    if ( value < ans ) {
+      ans = value;
+      opt[left][right] = i;
+    }
+  }
+  return ans;
+}
+
+//10) Longest Path in a Directed Acyclic Graph (DAG)
+//Algorithm or Logic: DP in DAG
+//Complexity: O(n+m)
+vector<int> adj[MAXN];
+vector<int> dp(MAXN, -1);
+void dfs(int p){
+    dp[p] = 0;
+    for(auto& u: adj[p]){
+        if(dp[u] == -1) dfs(u);
+        dp[p] = max(dp[p],dp[u]+1);
+    }
+} 
+
+
 /*
 Digit Dynamic Programming
 Longest Palindromic Subsequence
 k-enesimo possible paths from top left to bottom right corner of a matrix
-Longest Path in a Directed Acyclic Graph (DAG)
 Dynamic Programming on Trees
+Counting Tilings
+Optmización en Memoria - OK (Pendiente leer libro CP4)
 */
 
