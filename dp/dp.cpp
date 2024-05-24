@@ -341,6 +341,7 @@ void dfs(int p){
 Digit Dynamic Programming
 Longest Palindromic Subsequence
 k-enesimo possible paths from top left to bottom right corner of a matrix
+Reconstruir la respuesta
 Dynamic Programming on Trees
 Counting Tilings
 Optmización en Memoria - OK (Pendiente leer libro CP4)
