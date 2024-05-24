@@ -133,6 +133,7 @@ int lis(int i)
 }
 // memset(memo, -1, sizeof memo); lis(n-1);
 
+//4)longest common subsequence (LCS)
 //Algorithm or Logic: longest common subsequence (LCS)
 // Complexity: O(n^2)
 string lcs(string &s1, string &s2){
@@ -170,7 +171,7 @@ string lcs(string &s1, string &s2){
 // Con este algoritmo se puede reconstruir la respuesta
 
 
-//4)0-1 Knapsack (Subset-Sum)
+//5)0-1 Knapsack (Subset-Sum)
 //Algorithm or Logic: 
 //Complexity: O(nS)
 int dp(int id, int remW)
@@ -190,7 +191,7 @@ a set of integers and an integer S, is there a (non-empty) subset that has a sum
 En los problemas que se busca el valor y el peso es muy grande. Buscar la dp  que de el menor peso para un valor dado. Comprobar todos los valores y tomar el mejor.
 */
 
-//5) Coin-Change (CC) - The General Version
+//6) Coin-Change (CC) - The General Version
 //Algorithm or Logic: 
 //Complexity: O(nV)
 int dp(int type, int value) {
@@ -203,7 +204,7 @@ int dp(int type, int value) {
 }
 
 //6) Traveling-Salesman-Problem (TSP)
-//Algorithm or Logic: Halmiton's Path
+//Algorithm or Logic: Halmiton's Path  // Bitmask Dynamic Programming
 //Complexity: O((n^2)*2^(n-1))
 #define LSOne(x) ((x) & -(x)) //To get the value of the least significant bit of S that is on (first from the right)
 
@@ -267,7 +268,7 @@ ll dp(int a, int c)
 }
 
 //8) UVa 10003 - Cutting Sticks (Cutting)
-//Algorithm or Logic: 
+//Algorithm or Logic: Range Dp
 //Complexity: O((n^3))
 
 int cut[110];
@@ -292,3 +293,12 @@ for(int i = 1; i <= n; i++) cin >> cut[i];
 cut[n+1] = l;
 ll ans = dp(0, n+1);
 */
+
+/*
+Digit Dynamic Programming
+Longest Palindromic Subsequence
+k-enesimo possible paths from top left to bottom right corner of a matrix
+Longest Path in a Directed Acyclic Graph (DAG)
+Dynamic Programming on Trees
+*/
+
