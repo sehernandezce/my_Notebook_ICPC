@@ -324,7 +324,7 @@ int cut(int left, int right) {
 }
 
 //10) Longest Palindromic Subsequence
-//Algorithm or Logic: Range Dp with Knuth's Optimization
+//Algorithm or Logic: Longest Palindromic Subsequence
 //Complexity: O(n^2)
 
 // Ejercicio similar https://codeforces.com/gym/105164/problem/J
