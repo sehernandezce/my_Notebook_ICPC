@@ -323,7 +323,39 @@ int cut(int left, int right) {
   return ans;
 }
 
-//10) Longest Path in a Directed Acyclic Graph (DAG)
+//10) Longest Palindromic Subsequence
+//Algorithm or Logic: Range Dp with Knuth's Optimization
+//Complexity: O(n^2)
+
+// Ejercicio similar https://codeforces.com/gym/105164/problem/J
+const ll oo = 1e17+2;
+int k,n;
+string s;
+ll memo[501][501][501];
+ll dp(int l, int r, int sz)
+{
+    if(l > r || sz < 0) return oo;
+    if(l == r && sz == 1) return 0;
+    if(l+1 == r && sz == 2)
+    {
+        if(s[l] == s[r]) return 0;
+        return 1;
+    }
+    if(sz == 0) return 0;
+
+    auto &ans = memo[l][r][sz];
+    if(ans != -1) return ans;
+    ans = oo;
+    int chk = 1 - (s[l] == s[r]);
+
+    ans = min(ans, dp(l, r-1, sz));
+    ans = min(ans, dp(l+1, r, sz));
+    ans = min(ans, dp(l+1, r-1, sz-2) + chk);
+
+    return ans;
+}
+
+//11) Longest Path in a Directed Acyclic Graph (DAG)
 //Algorithm or Logic: DP in DAG
 //Complexity: O(n+m)
 vector<int> adj[MAXN];
@@ -335,7 +367,6 @@ void dfs(int p){
         dp[p] = max(dp[p],dp[u]+1);
     }
 } 
-
 
 /*
 Digit Dynamic Programming
