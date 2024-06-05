@@ -39,6 +39,14 @@ void FloydW(){
     }
 }
 
+bool FloydWCicleNeg(){
+    for(int u = 1; u <= n; u++)
+    {
+        if(matAdj[u][u] < 0) return true;
+    }
+    return false;
+}
+
 /*
 // Previamente 
 fill(matrixAdj,matrixAdj+510,oo);  for(int i = 0; i < 510; i++){matrixAdj[i][i] = 0;}
