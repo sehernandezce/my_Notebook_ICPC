@@ -94,7 +94,7 @@ int find(int x){ // log2(n)
 void merge(int a, int b){
     a = find(a);
     b = find(b);
-    ig(a == b) return;
+    if(a == b) return;
     if(len[a] > len[b]) swap(a,b); // En a queda el menor len
     len[b] += len[a];
     f[a]=b;
