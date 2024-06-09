@@ -368,8 +368,45 @@ void dfs(int p){
     }
 } 
 
+//12) Digit Dynamic Programming
+//Algorithm or Logic: Digit DP
+//Complexity: O(?)
+ll memo[20][185][2];
+ll dp(string& num, int i, ll sum, int f)
+{
+    if(i == (int)num.size()) return sum;
+
+    auto &r = memo[i][sum][f];
+    if(r != -1) return r;
+    r = 0;
+    
+    int lim = (f? (num[i]-'0'): 9);
+    for(int a = 0; a <= lim; a++)
+    {
+        r += dp(num, i+1, sum+a, (f && (a == lim)));
+    }
+
+    return r;
+}
+
+/*    
+problem: https://vjudge.net/problem/SPOJ-PR003004
+    ll lo, hi; cin >> lo >> hi; 
+    if(lo != 0) lo--;
+    string l = to_string(lo), r = to_string(hi);
+    
+    memset(memo, -1, sizeof memo);
+    ll dpL = dp(l, 0, 0, 1);
+    // cout << dpL << " " << f(lo) << '\n';
+    
+    memset(memo, -1, sizeof memo);
+    ll dpR = dp(r, 0, 0, 1);
+    // cout << dpR << " " << f(hi) << '\n';
+    
+    cout << (dpR - dpL) << '\n';
+*/
+
 /*
-Digit Dynamic Programming
 Longest Palindromic Subsequence
 k-enesimo possible paths from top left to bottom right corner of a matrix
 Reconstruir la respuesta
