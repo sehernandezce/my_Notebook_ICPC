@@ -52,7 +52,7 @@ void f2(int n)
 // Where k is the length of the LIS
 
 int p[N], A[N];
-vector<int> L(N), L_id(N);
+vector<int> Lis(N), Lis_id(N);
 void print_lis(int i)
 {   
     int ele = A[i];
@@ -64,29 +64,44 @@ void print_lis(int i)
     print_lis(p[i]);
     cout << ele << " ";
 }
-int lis(int n)
+int get_lis(int n, int *Lis_pos)
 {
     int k = 0, lis_end = 0;
-    for(int i = 0; i < n; i++) L[i] = L_id[i] = 0;
+    for(int i = 0; i < n; i++) Lis[i] = Lis_id[i] = 0;
     for(int i = 0; i < n; i++) p[i] = -1;
 
     for(int i = 0; i < n; i++)
     {   
         int ele = A[i];
-        int pos = lower_bound(L.begin(), L.begin()+k, ele) - L.begin();
-        L[pos] = ele; 
-        L_id[pos] = i;
-        p[i] = (pos ? L_id[pos-1]: -1);
+        int pos = lower_bound(Lis.begin(), Lis.begin()+k, ele) - Lis.begin();
+        
+        Lis[pos] = ele; 
+        Lis_pos[i] = pos; //Lis_pos[i] be the length of a constrained LIS whose last element is A[i]
+        /*if L_LIS[i] + R_LIS[i] + 1 == szLis  A[i] is in LIS*/
+
+        // Lis_id[pos] = i;
+        // p[i] = (pos ? Lis_id[pos-1]: -1);
+        
         if(pos == k)
         {
             k = pos+1;
-            lis_end = i;
+            //lis_end = i;
         }
     }
     // cout << k << '\n';
     // if(k > 0) {print_lis(lis_end); cout << '\n';}
     return k;
 }
+/*
+int L_LIS[n];
+int szLis = get_lis(n, L_LIS);
+
+int R_LIS[n];
+reverse(A, A+n);
+for(int i = 0; i < n; i++) A[i]*=-1;
+get_lis(n, R_LIS);
+reverse(R_LIS, R_LIS+n);
+*/
 
 // Given a sequence {A[0], A[1],..., A[n-1]}, determine its Longest Increasing Subsequence (LIS)
 // longest common subsequence in two Permutation of equal lenght both
