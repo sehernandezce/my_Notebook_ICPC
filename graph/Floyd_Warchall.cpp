@@ -47,6 +47,19 @@ bool FloydWCicleNeg(){
     return false;
 }
 
+/* Reconocer caminos con ciclos negativos !!!
+F0R(k, n)
+	F0R(i, n)
+	F0R(j, n)
+	if (dist[i][k] != INF && dist[k][j] != INF)
+		if (dist[i][j] > dist[i][k] + dist[k][j]) bad[i][j] = 1;
+
+F0R(k, n) F0R(i, n) F0R(j, n) {
+ if (dist[i][k] < INF && bad[k][j]) bad[i][j] = 1;
+ if (bad[i][k] && dist[k][j] < INF) bad[i][j] = 1;
+}
+*/
+
 /*
 // Previamente 
 fill(matrixAdj,matrixAdj+510,oo);  for(int i = 0; i < 510; i++){matrixAdj[i][i] = 0;}
